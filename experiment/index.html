@@ -60,10 +60,23 @@
       }
   });
   
-  /* Capture info from Prolific */
+  /* Randomly assign a condition */
   var id = jsPsych.randomization.randomID();
+  var conditions = {
+      vignette: ['base', 'reversal', 'adversarial'],
+      factor: ['productive_factor', 'double_preventer']
+  }
+  
+  var condition = jsPsych.randomization.sampleWithoutReplacement(jsPsych.randomization.factorial(conditions, 1), 1)[0];
+  console.log('ID: ' + id);
+  console.log('vignette: ' + condition.vignette);
+  console.log('factor: ' + condition.factor);
+  
+  /* Capture info from Prolific */
   jsPsych.data.addProperties({
       id: id,
+      vignette: condition.vignette,
+      factor: condition.factor,
       prolific_id: jsPsych.data.getURLVariable('PROLIFIC_PID'),
       study_id: jsPsych.data.getURLVariable('STUDY_ID'),
       session_id: jsPsych.data.getURLVariable('SESSION_ID')
@@ -85,15 +98,6 @@ Seeing that the bottle was starting to fall, Jack decided to try to catch it eve
 Jack did not grab the bottle, and it fell to the ground and spilled.`
   }
   
-  var conditions = {
-      vignette: ['base', 'reversal', 'adversarial'],
-      factor: ['productive_factor', 'double_preventer']
-  }
-
-  var condition = jsPsych.randomization.sampleWithoutReplacement(jsPsych.randomization.factorial(conditions, 1), 1)[0];
-  console.log('ID: ' + id);
-  console.log('vignette: ' + condition.vignette);
-  console.log('factor: ' + condition.factor);
   
 
   /* Get informed consent */
@@ -130,6 +134,7 @@ Jack did not grab the bottle, and it fell to the ground and spilled.`
 	  },
 	  data: function () {
 	      return {
+		  measure: 'vignette',
 		  vignette: jsPsych.timelineVariable('vignette'),
 		  factor: jsPsych.timelineVariable('factor')
 	      }
@@ -166,7 +171,11 @@ Jack did not grab the bottle, and it fell to the ground and spilled.`
   var gender = {
       type: jsPsychSurveyMultiSelect,
       questions: [{name: 'gender', type: 'multi-choice', prompt: 'What is your gender?',
-		   options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']), option_reorder: 'random', required: true}]
+		   options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']), option_reorder: 'random', required: true}],
+      on_finish: function (data) {
+	  data.measure = "gender";
+          data.response = data.response.gender[0];
+      }
   }
 
   var attn_check = {
@@ -185,12 +194,20 @@ and take all study tasks seriously (even when they might seem silly).</p>
 							   "No, I did not take the study seriously",
 							   "No, something else affected my participation negatively.",
 							   "Yes."])
-		  }]
+		  }],
+      on_finish: function (data) {
+	  data.measure = "attention_check";
+          data.response = data.response.attn_check[0];
+      }
   }
 
   var comments = {
       type: jsPsychSurveyText,
-      questions: [{name: 'comments', type: 'text', prompt: "Do you have anything else to add (comments, questions, etc)?", rows: 10}]
+      questions: [{name: 'comments', type: 'text', prompt: "Do you have anything else to add (comments, questions, etc)?", rows: 10}],
+      on_finish: function (data) {
+	  data.measure = "comments";
+          data.response = data.response.comments;
+      }
   }
   
   /* start the experiment */
