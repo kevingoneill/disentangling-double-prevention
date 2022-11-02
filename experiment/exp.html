@@ -1,0 +1,198 @@
+<!Doctype html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>A study about causal reasoning</title>
+    <script src="https://unpkg.com/jspsych@7.3.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-external-html@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-select@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@1.1.2"></script>
+    <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--- CSS classes to show/hide the slider thumb  --->
+    <style>
+      .jspsych-slider.hidden::-webkit-slider-thumb {
+          visibility: hidden;
+      }
+
+      .jspsych-slider.hidden::-moz-range-thumb {
+          visibility: hidden;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // Set up jsPsych
+  var jsPsych = initJsPsych({
+      experiment_width: 600,
+      on_finish: async function (data) {
+	  // Display completion screen
+	  jsPsych.getDisplayElement().innerHTML =
+              '<div><p>Thanks for completing this experiment!</p>' +
+              '<p>Saving your data now......' +
+              '<span id="done" style="visibility: hidden;">done!</span></p></div><br><br>' +
+              '<p>You will be automatically redirected back to Prolific once the data is saved.</p>';
+
+	  //  Save data via HTTP POST
+	  let dataToServer = {
+              'id': id,
+              'extension': 'csv',
+              'directory': 'data',
+              'experimentName': 'test',
+	      'curData': data.csv()
+	  };
+	  await $.post("https://dibs-web01.vm.duke.edu/debrigard/double-prevention-reversal/exp/save.php",
+                       dataToServer,
+                       function(data) {
+    			   document.getElementById('done').style.visibility = "visible";
+			   
+			   // Re-direct back to Prolific if  is present
+			   if (jsPsych.data.getURLVariable('PROLIFIC_PID') != null)
+			       setTimeout(function() {
+				   window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX";
+			       }, 3000);
+                       }).promise().catch(function () {});
+      }
+  });
+  
+  /* Capture info from Prolific */
+  var id = jsPsych.randomization.randomID();
+  jsPsych.data.addProperties({
+      id: id,
+      prolific_id: jsPsych.data.getURLVariable('PROLIFIC_PID'),
+      study_id: jsPsych.data.getURLVariable('STUDY_ID'),
+      session_id: jsPsych.data.getURLVariable('SESSION_ID')
+  });
+
+  /* Randomly select one vignette to display */
+  var vignettes = {
+      base: `In a crowded bar, Mike accidentally knocked against a bottle, which happens all the time. 
+Seeing that the bottle was about to fall, Jack decided to try to catch the bottle since it was within his reach. 
+After starting to reach for the bottle, he was just about to grasp it when Peter accidentally knocked against him, making Jack unable to catch the bottle. 
+Jack did not grab the bottle, and it fell to the ground and spilled.`,
+      reversal: `In a crowded bar, Mike accidentally knocked against a bottle, which happens all the time. 
+Seeing that the bottle was about to fall, Jack decided to try to catch the bottle since he was a very skilled juggler and it was easily within his reach. 
+As it was extremely easy for him to reach the bottle, he was just about to grasp it when Peter intentionally pushed him, making Jack unable to catch the bottle. 
+Jack did not grab the bottle, and it fell to the ground and spilled.`,
+      adversarial: `In a crowded bar, Mike accidentally knocked against a bottle, which happens all the time. 
+Seeing that the bottle was starting to fall, Jack decided to try to catch it even though he was slow and it wasn’t easily within his reach.
+ Despite the fact that it was extremely difficult for him to reach the bottle, he was just about to grasp it when Peter intentionally pushed him, making Jack unable to catch the bottle.
+Jack did not grab the bottle, and it fell to the ground and spilled.`
+  }
+  
+  var conditions = {
+      vignette: ['base', 'reversal', 'adversarial'],
+      factor: ['productive_factor', 'double_preventer']
+  }
+
+  var condition = jsPsych.randomization.sampleWithoutReplacement(jsPsych.randomization.factorial(conditions, 1), 1)[0];
+  console.log('ID: ' + id);
+  console.log('vignette: ' + condition.vignette);
+  console.log('factor: ' + condition.factor);
+  
+
+  /* Get informed consent */
+  var consent = {
+      type: jsPsychExternalHtml,
+      url: "consent.html",
+      cont_btn: "start",
+      check_fn: function () {
+	  if (!document.getElementById('consent_checkbox').checked) {
+	      alert("If you wish to participate, you must check the box next to the statement 'I consent to participate in this study.'");
+	      return false;
+	  }
+	  return true;
+      }
+  };
+  
+  var vignette = {
+      timeline: [{
+	  type: jsPsychHtmlSliderResponse,
+	  min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
+	  labels: ['strongly disagree', 'neither agree nor disagree', 'strongly agree'],
+	  stimulus: function () {
+	      let question = 'Mike knocking into the bottle caused the bottle to spill.';
+	      if (jsPsych.timelineVariable('factor') == 'double_preventer') {
+		  if (jsPsych.timelineVariable('vignette') == 'base')
+		      question =  'Peter knocking into Jack caused the bottle to spill.';
+		  else
+		      question = 'Peter pushing Jack caused the bottle to spill.';
+	      }
+	      
+	      return '<p>' + vignettes[jsPsych.timelineVariable('vignette')] + '</p>' +
+		  '<br><p><strong>To what degree do you agree with the following statement?</strong></p>' +
+		  '<p>' + question + '</p>';		  
+	  },
+	  data: function () {
+	      return {
+		  vignette: jsPsych.timelineVariable('vignette'),
+		  factor: jsPsych.timelineVariable('factor')
+	      }
+	  },
+
+	  // Hide the slider thumb until response
+	  on_load: function () {
+	      document.getElementById('jspsych-html-slider-response-response').classList.add('hidden');
+	      document.getElementById('jspsych-html-slider-response-response').addEventListener('click', function (e) {
+		  e.target.classList.remove('hidden');
+	      });
+	  }
+      }],
+      timeline_variables: [condition]
+  }
+
+  
+  /* Display post-questionnaire */
+  var age = {
+      timeline: [{type: jsPsychSurveyText,
+		  questions: [{name: "age", prompt: "What is your age?", required: true}],
+		  on_finish: function (data) {
+		      data.measure = "age";
+                      data.response = parseInt(data.response.age);
+		  }}],
+      loop_function: function (data) {
+	  let response = parseInt(data.values()[0].response);
+	  if (isNaN(response)) alert("Please enter in your age as a number.");
+	  if (!isNaN(response) & (response <= 0 || response > 150)) alert("Please enter a valid age.");
+	  return isNaN(response) || response <= 0 || response > 150;
+      }
+  };
+
+  var gender = {
+      type: jsPsychSurveyMultiSelect,
+      questions: [{name: 'gender', type: 'multi-choice', prompt: 'What is your gender?',
+		   options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']), option_reorder: 'random', required: true}]
+  }
+
+  var attn_check = {
+      type: jsPsychSurveyMultiSelect,
+      questions: [{name: 'attn_check', type: 'multi-choice', required: true,
+		   prompt: `<p align='left'>Please be honest when answering the following question.
+<b>Your answer will not affect your payment or eligibility for future studies.</b></p>
+<p align='left'>The study you have just participated in is a psychological study aimed at understanding human cognition and behavior.
+Psychological research depends on participants like you.
+Your responses to surveys like this one are an incredibly valuable source of data for researchers.
+It is therefore crucial for research that participants pay attention, avoid distractions,
+and take all study tasks seriously (even when they might seem silly).</p>
+<p align='left'><b>Do you feel that you paid attention, avoided distractions, and took this survey seriously?</b></p>`,
+		   options: jsPsych.randomization.shuffle(["No, I was distracted.",
+							   "No, I had trouble paying attention",
+							   "No, I did not take the study seriously",
+							   "No, something else affected my participation negatively.",
+							   "Yes."])
+		  }]
+  }
+
+  var comments = {
+      type: jsPsychSurveyText,
+      questions: [{name: 'comments', type: 'text', prompt: "Do you have anything else to add (comments, questions, etc)?", rows: 10}]
+  }
+  
+  /* start the experiment */
+  jsPsych.run([consent, vignette, age, gender, attn_check, comments]);
+  </script>
+
