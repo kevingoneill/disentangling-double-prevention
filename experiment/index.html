@@ -45,7 +45,7 @@
               'experimentName': 'test',
 	      'curData': data.csv()
 	  };
-	  await $.post("https://dibs-web01.vm.duke.edu/debrigard/double-prevention-reversal/exp/save.php",
+	  await $.post("https://dibs-web01.vm.duke.edu/debrigard/double-prevention-reversal/experiment/save.php",
                        dataToServer,
                        function(data) {
     			   document.getElementById('done').style.visibility = "visible";
@@ -53,6 +53,7 @@
 			   // Re-direct back to Prolific if  is present
 			   if (jsPsych.data.getURLVariable('PROLIFIC_PID') != null)
 			       setTimeout(function() {
+				   // TODO: set completion code
 				   window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXX";
 			       }, 3000);
                        }).promise().catch(function () {});
