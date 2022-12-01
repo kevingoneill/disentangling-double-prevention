@@ -182,7 +182,7 @@ var gender = {
                option_reorder: 'random', required: true}],
   on_finish: function (data) {
     data.measure = "gender";
-    data.response = data.response.gender[0];
+    data.response = data.response.gender;
   }
 };
 
@@ -205,7 +205,7 @@ and take all study tasks seriously (even when they might seem silly).</p>
 	  }],
     on_finish: function (data) {
       data.measure = "attention_check";
-      data.response = data.response.attn_check[0];
+      data.response = data.response.attn_check;
     }
 };
 
