@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/@jspsych/plugin-external-html@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-select@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@1.1.2"></script>
     <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -176,7 +176,7 @@ var age = {
 };
 
 var gender = {
-  type: jsPsychSurveyMultiSelect,
+  type: jsPsychSurveyMultiChoice,
   questions: [{name: 'gender', type: 'multi-choice', prompt: 'What is your gender?',
                options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']),
                option_reorder: 'random', required: true}],
@@ -187,7 +187,7 @@ var gender = {
 };
 
 var attn_check = {
-  type: jsPsychSurveyMultiSelect,
+  type: jsPsychSurveyMultiChoice,
   questions: [{name: 'attn_check', type: 'multi-choice', required: true,
   prompt: `<p align='left'>Please be honest when answering the following question.
 <b>Your answer will not affect your payment or eligibility for future studies.</b></p>
