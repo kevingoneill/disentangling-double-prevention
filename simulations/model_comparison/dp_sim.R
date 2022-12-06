@@ -39,7 +39,7 @@ d.pred %>%
     coord_fixed(expand=FALSE) +
     ggtitle('Model Predictions: Double Preventer') +
     theme_classic()
-ggsave('dp_mean.png', width=8, height=4)
+ggsave('plots/dp_mean.png', width=8, height=4)
 
 
 
@@ -56,7 +56,7 @@ d.pred %>%
     coord_fixed(expand=FALSE) +
     ggtitle('Model Predictions: Productive Cause') +
     theme_classic()
-ggsave('pc_mean.png', width=8, height=4)
+ggsave('plots/pc_mean.png', width=8, height=4)
 
 
 
@@ -73,7 +73,7 @@ d.pred %>%
     coord_fixed(expand=FALSE) +
     ggtitle('Model Predictions: Double Prevention Effect') +
     theme_classic()
-ggsave('dp_effect.png', width=8, height=4)
+ggsave('plots/dp_effect.png', width=8, height=4)
 
 
 
@@ -90,28 +90,4 @@ d.pred %>%
     coord_fixed(expand=FALSE) +
     ggtitle('Model Predictions: Possible Preventer') +
     theme_classic()
-ggsave('pp_mean.png', width=8, height=4)
-
-
-
-
-
-
-## Simulated model predictions to verify derivations
-##  (this may take a while to run)
-N <- 10000  ## number of samples
-d.sim <- expand_grid(p.PC=seq(0, 1, .01),
-            p.PP=seq(0, 1, .1),
-            p.DP=seq(0, 1, .01),
-            n=1:N) %>%
-    group_by(p.PC, p.PP, p.DP) %>%
-    mutate(PC=rbernoulli(n(), p.PC),  ## productive cause
-           PP=rbernoulli(n(), p.PP),  ## possible preventer
-           DP=rbernoulli(n(), p.DP),  ## double preventer
-           P=PP * (1-DP),             ## actual prevention
-           E=PC * (1-P)) %>%          ## actual outcome
-    summarize(N=max(n),
-              Quillien.PC=cor(PC, E),
-              Quillien.DP=cor(DP, E),
-              Icard.PC=mean((1-PC) + PC*((1-PP)*(1-DP) + (1-PP)*DP + PP*DP)),
-              Icard.DP=mean((1-DP) + DP*PC))
+ggsave('plots/pp_mean.png', width=8, height=4)
