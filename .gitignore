@@ -1,6 +1,7 @@
 # History files
 experiment/data
 **/*.*~
+**/*.DS_Store
 .Rhistory
 .Rapp.history
 
