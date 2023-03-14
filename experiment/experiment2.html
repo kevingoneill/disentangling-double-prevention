@@ -1,0 +1,408 @@
+<!Doctype html>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <title>A study about causal reasoning</title>
+    <script src="https://unpkg.com/jspsych@7.3.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-external-html@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@1.1.2"></script>
+    <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--- CSS classes to show/hide the slider thumb  --->
+    <style>
+      .jspsych-slider.hidden::-webkit-slider-thumb {
+          visibility: hidden;
+      }
+
+      .jspsych-slider.hidden::-moz-range-thumb {
+          visibility: hidden;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<script>
+// Set up jsPsych
+var jsPsych = initJsPsych({
+    experiment_width: 800,
+    on_finish: async function (data) {
+      // Display completion screen
+      jsPsych.getDisplayElement().innerHTML =
+        '<div><p>Thanks for completing this experiment!</p>' +
+        '<p>Saving your data now......' +
+        '<span id="done" style="visibility: hidden;">done!</span></p></div><br><br>' +
+        '<p>You will be automatically redirected back to Prolific once the data is saved.</p>';
+
+      //  Save data via HTTP POST
+      let dataToServer = {
+        'id': id,
+        'extension': 'csv',
+        'directory': 'data',
+        'experimentName': 'experiment2',
+        'curData': data.csv()
+      };
+      await $.post("https://dibs-web01.vm.duke.edu/debrigard/double-prevention-reversal/experiment/save.php",
+                   dataToServer,
+                   function(data) {
+      			            document.getElementById('done').style.visibility = "visible";
+
+                  		   // Re-direct back to Prolific if  is present
+                  		   if (jsPsych.data.getURLVariable('PROLIFIC_PID') != null)
+                  		     setTimeout(function() {
+                             window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXXXX";
+                  		     }, 3000);
+                   }).promise().catch(function () {});
+    }
+});
+
+
+/* A complete list of every possible vignette/condition/factor combination  */
+var vignettes = [{
+  vignette: 'allergies', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>Melanie suffers every spring from pollen allergies.</p>
+             <p>Knowing this, she regularly takes a prescribed allergy medicine to alleviate her symptoms.</p>
+             <p>One spring day, Melanie wakes up and decides to take her allergy medicine just as usual.</p>
+             <p>However, Melanie’s little brother, Mark, played a prank on her: he hid her allergy medicine, making her unable to take it. As a result, Melanie developed allergy symptoms that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The pollen being present in the air caused Melanie to develop allergy symptoms.</p>`
+}, {
+  vignette: 'allergies', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>Melanie suffers every spring from pollen allergies.</p>
+             <p>Knowing this, she regularly takes a prescribed allergy medicine to alleviate her symptoms.</p>
+             <p>One spring day, Melanie wakes up and decides to take her allergy medicine just as usual.</p>
+             <p>However, Melanie’s little brother, Mark, played a prank on her: he hid her allergy medicine, making her unable to take it. As a result, Melanie developed allergy symptoms that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Mark hiding Melanie’s allergy medicine caused Melanie to develop allergy symptoms.</p>`
+}, {
+  vignette: 'allergies', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>Melanie suffers every spring from pollen allergies.</p>
+             <p>Despite knowing this, she almost never takes any allergy medicine to alleviate her symptoms.</p>
+             <p>One spring day, though, Melanie wakes up and decides to take some allergy medicine.</p>
+             <p>However, Melanie’s little brother, Mark, played a prank on her: he hid her allergy medicine, making her unable to take it. As a result, Melanie developed allergy symptoms that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The pollen being present in the air caused Melanie to develop allergy symptoms.</p>`
+}, {
+  vignette: 'allergies', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>Melanie suffers every spring from pollen allergies.</p>
+             <p>Despite knowing this, she almost never takes any allergy medicine to alleviate her symptoms.</p>
+             <p>One spring day, though, Melanie wakes up and decides to take some allergy medicine.</p>
+             <p>However, Melanie’s little brother, Mark, played a prank on her: he hid her allergy medicine, making her unable to take it. As a result, Melanie developed allergy symptoms that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Mark hiding Melanie’s allergy medicine caused Melanie to develop allergy symptoms.</p>`
+},
+
+{
+  vignette: 'floss', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>Sandra loves to eat eggs every morning. But, Sandra’s dentist told her that whenever she eats eggs, particles of food left over in her mouth turn to plaque, which gives her bad breath.</p>
+             <p>The dentist also told her that flossing removes the plaque that creates bad breath. Knowing this, Sandra flosses after each and every meal so that she doesn’t have bad breath.</p>
+             <p>One day, Sandra eats some eggs for breakfast, and she goes to floss her teeth just as usual.</p>
+             <p>However, she didn’t know that her husband was mad at her and threw her floss in the trash the night before. As a result, Sandra couldn’t find her floss, and she had bad breath that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Sandra eating eggs caused her to have bad breath.</p>`
+}, {
+  vignette: 'floss', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>Sandra loves to eat eggs every morning. But, Sandra’s dentist told her that whenever she eats eggs, particles of food left over in her mouth turn to plaque, which gives her bad breath.</p>
+             <p>The dentist also told her that flossing removes the plaque that creates bad breath. Knowing this, Sandra flosses after each and every meal so that she doesn’t have bad breath.</p>
+             <p>One day, Sandra eats some eggs for breakfast, and she goes to floss her teeth just as usual.</p>
+             <p>However, she didn’t know that her husband was mad at her and threw her floss in the trash the night before. As a result, Sandra couldn’t find her floss, and she had bad breath that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Sandra’s husband throwing away her floss caused her to have bad breath.</p>`
+}, {
+  vignette: 'floss', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>Sandra loves to eat eggs every morning. But, Sandra’s dentist told her that whenever she eats eggs, particles of food left over in her mouth turn to plaque, which gives her bad breath.</p>
+             <p>The dentist also told her that flossing removes the plaque that creates bad breath. Despite this, Sandra never flosses after any of her meals, and she almost always has bad breath.</p>
+             <p>One day, Sandra eats some eggs for breakfast as usual, but today she goes to floss her teeth.</p>
+             <p>However, she didn’t know that her husband was mad at her and threw her floss in the trash the night before. As a result, Sandra couldn’t find her floss, and she had bad breath that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Sandra eating eggs caused her to have bad breath.</p>`
+}, {
+  vignette: 'floss', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>Sandra loves to eat eggs every morning. But, Sandra’s dentist told her that whenever she eats eggs, particles of food left over in her mouth turn to plaque, which gives her bad breath.</p>
+             <p>The dentist also told her that flossing removes the plaque that creates bad breath. Despite this, Sandra never flosses after any of her meals, and she almost always has bad breath.</p>
+             <p>One day, Sandra eats some eggs for breakfast as usual, but today she goes to floss her teeth.</p>
+             <p>However, she didn’t know that her husband was mad at her and threw her floss in the trash the night before. As a result, Sandra couldn’t find her floss, and she had bad breath that day.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Sandra’s husband throwing away her floss caused her to have bad breath.</p>`
+},
+
+{
+  vignette: 'heartworm', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+             <p>Ted regularly gives his dog heartworm medication on the first day of every month to prevent a heartworm infection.</p>
+             <p>On July 1, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
+             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The mosquito biting Ted’s dog caused Ted’s dog to have heartworm.</p>`
+}, {
+  vignette: 'heartworm', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+             <p>Ted regularly gives his dog heartworm medication on the first day of every month to prevent a heartworm infection.</p>
+             <p>On July 1, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
+             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Ted’s roommate switching the medicine caused Ted’s dog to have heartworm.</p>`
+}, {
+  vignette: 'heartworm', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+             <p>Despite knowing this, Ted rarely gives his dog heartworm medication.</p>
+             <p>On July 1, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
+             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The mosquito biting Ted’s dog caused Ted’s dog to have heartworm.</p>`
+}, {
+  vignette: 'heartworm', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+             <p>Despite knowing this, Ted rarely gives his dog heartworm medication.</p>
+             <p>On July 1, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
+             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Ted’s roommate switching the medicine caused Ted’s dog to have heartworm.</p>`
+},
+
+{
+  vignette: 'sunscreen', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>Claire lives in Miami, where she goes to the beach every morning. It’s very sunny, so there is a lot of UV exposure.</p>
+             <p>Knowing this, Claire regularly puts on a lot of sunscreen.</p>
+             <p>On Saturday morning, Claire goes to grab her sunscreen from the bathroom as usual.</p>
+             <p>Unbeknownst to Claire, her roommate, Louie, was very angry at her. Secretly, Louie switched Claire’s sunscreen with regular lotion that lacks UV protection. Thinking she is applying sunscreen, Claire puts on the lotion.</p>
+             <p>That morning, Claire went out in the sun at the beach. As a result, Claire got a bad sunburn.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Claire getting exposed to UV radiation at the beach caused Claire’s sunburn.</p>`
+}, {
+  vignette: 'sunscreen', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>Claire lives in Miami, where she goes to the beach every morning. It’s very sunny, so there is a lot of UV exposure.</p>
+             <p>Knowing this, Claire regularly puts on a lot of sunscreen.</p>
+             <p>On Saturday morning, Claire goes to grab her sunscreen from the bathroom as usual.</p>
+             <p>Unbeknownst to Claire, her roommate, Louie, was very angry at her. Secretly, Louie switched Claire’s sunscreen with regular lotion that lacks UV protection. Thinking she is applying sunscreen, Claire puts on the lotion.</p>
+             <p>That morning, Claire went out in the sun at the beach. As a result, Claire got a bad sunburn.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Louie switching Claire’s sunscreen for lotion caused Claire’s sunburn.</p>`
+}, {
+  vignette: 'sunscreen', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>Claire lives in Miami, where she goes to the beach every morning. It’s very sunny, so there is a lot of UV exposure.</p>
+             <p>Despite knowing this, Claire almost never puts on sunscreen.</p>
+             <p>On Saturday morning, however, Claire goes to grab her sunscreen from the bathroom.</p>
+             <p>Unbeknownst to Claire, her roommate, Louie, was very angry at her. Secretly, Louie switched Claire’s sunscreen with regular lotion that lacks UV protection. Thinking she is applying sunscreen, Claire puts on the lotion.</p>
+             <p>That morning, Claire went out in the sun at the beach. As a result, Claire got a bad sunburn.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Claire getting exposed to UV radiation at the beach caused Claire’s sunburn.-</p>`
+}, {
+  vignette: 'sunscreen', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>Claire lives in Miami, where she goes to the beach every morning. It’s very sunny, so there is a lot of UV exposure.</p>
+             <p>Despite knowing this, Claire almost never puts on sunscreen.</p>
+             <p>On Saturday morning, however, Claire goes to grab her sunscreen from the bathroom.</p>
+             <p>Unbeknownst to Claire, her roommate, Louie, was very angry at her. Secretly, Louie switched Claire’s sunscreen with regular lotion that lacks UV protection. Thinking she is applying sunscreen, Claire puts on the lotion.</p>
+             <p>That morning, Claire went out in the sun at the beach. As a result, Claire got a bad sunburn.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Louie switching Claire’s sunscreen for lotion caused Claire’s sunburn.</p>`
+},
+
+{
+  vignette: 'lactose', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>Even though she is lactose intolerant, Edith consumes dairy products all of the time.</p>
+             <p>Edith always takes Lactaid before she consumes dairy products. Taking Lactaid prevents any symptoms from her intolerance.</p>
+             <p>Edith is going out for ice cream with some friends on Saturday night. Just as usual, Edith goes to grab some Lactaid before going out.</p>
+             <p>Unbeknownst to Edith, her enemy, Molly, was very angry at her. Secretly, Molly switched Edith’s Lactaid with sugar pills that look just like Lactaid pills. Thinking she is taking Lactaid, Edith consumes a sugar pill.</p>
+             <p>That night, Edith ate ice cream. As a result, Edith got a bad stomach ache.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Edith consuming ice cream caused Edith’s stomach ache.</p>`
+}, {
+  vignette: 'lactose', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>Even though she is lactose intolerant, Edith consumes dairy products all of the time.</p>
+             <p>Edith always takes Lactaid before she consumes dairy products. Taking Lactaid prevents any symptoms from her intolerance.</p>
+             <p>Edith is going out for ice cream with some friends on Saturday night. Just as usual, Edith goes to grab some Lactaid before going out.</p>
+             <p>Unbeknownst to Edith, her enemy, Molly, was very angry at her. Secretly, Molly switched Edith’s Lactaid with sugar pills that look just like Lactaid pills. Thinking she is taking Lactaid, Edith consumes a sugar pill.</p>
+             <p>That night, Edith ate ice cream. As a result, Edith got a bad stomach ache.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Molly switching Edith’s Lactaid pills caused Edith’s stomach ache.</p>`
+}, {
+  vignette: 'lactose', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>Even though she is lactose intolerant, Edith consumes dairy products all of the time.</p>
+             <p>Taking Lactaid prevents any symptoms from her intolerance. However, Edith almost never takes Lactaid before she consumes dairy products, so she often gets stomach aches.</p>
+             <p>Edith is going out for ice cream with some friends on Saturday night. This time, however, Edith goes to grab some Lactaid before going out..</p>
+             <p>Unbeknownst to Edith, her enemy, Molly, was very angry at her. Secretly, Molly switched Edith’s Lactaid with sugar pills that look just like Lactaid pills. Thinking she is taking Lactaid, Edith consumes a sugar pill.</p>
+             <p>That night, Edith ate ice cream. As a result, Edith got a bad stomach ache.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Edith consuming ice cream caused Edith’s stomach ache.</p>`
+}, {
+  vignette: 'lactose', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>Even though she is lactose intolerant, Edith consumes dairy products all of the time.</p>
+             <p>Taking Lactaid prevents any symptoms from her intolerance. However, Edith almost never takes Lactaid before she consumes dairy products, so she often gets stomach aches.</p>
+             <p>Edith is going out for ice cream with some friends on Saturday night. This time, however, Edith goes to grab some Lactaid before going out..</p>
+             <p>Unbeknownst to Edith, her enemy, Molly, was very angry at her. Secretly, Molly switched Edith’s Lactaid with sugar pills that look just like Lactaid pills. Thinking she is taking Lactaid, Edith consumes a sugar pill.</p>
+             <p>That night, Edith ate ice cream. As a result, Edith got a bad stomach ache.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">Molly switching Edith’s Lactaid pills caused Edith’s stomach ache.</p>`
+},
+
+{
+  vignette: 'coffee', condition: 'reversal', factor: 'productive_factor',
+  stimulus: `<p>James has a boring office job. Whenever he does paperwork, he always tends to be tired in the afternoon.</p>
+             <p>James knows that coffee keeps him from getting tired. So, he drinks a cup of coffee at a nearby cafe after lunch every day.</p>
+             <p>One day, James spends the morning doing paperwork. As part of his ordinary routine, he orders a cup of coffee from the cafe after lunch.</p>
+             <p>However, the barista at the cafe is in a bad mood. This time, he secretly gives James a cup of decaffeinated coffee, which looks and tastes the same as ordinary coffee but doesn’t provide energy.</p>
+             <p>So, James unknowingly drinks the decaffeinated coffee. As a result, he got very tired later that afternoon.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">James doing paperwork in the morning caused him to be tired in the afternoon.</p>`
+}, {
+  vignette: 'coffee', condition: 'reversal', factor: 'double_preventer',
+  stimulus: `<p>James has a boring office job. Whenever he does paperwork, he always tends to be tired in the afternoon.</p>
+             <p>James knows that coffee keeps him from getting tired. So, he drinks a cup of coffee at a nearby cafe after lunch every day.</p>
+             <p>One day, James spends the morning doing paperwork. As part of his ordinary routine, he orders a cup of coffee from the cafe after lunch.</p>
+             <p>However, the barista at the cafe is in a bad mood. This time, he secretly gives James a cup of decaffeinated coffee, which looks and tastes the same as ordinary coffee but doesn’t provide energy.</p>
+             <p>So, James unknowingly drinks the decaffeinated coffee. As a result, he got very tired later that afternoon.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The barista giving James decaffeinated coffee caused him to be tired in the afternoon.</p>`
+}, {
+  vignette: 'coffee', condition: 'adversarial', factor: 'productive_factor',
+  stimulus: `<p>James has a boring office job. Whenever he does paperwork, he always tends to be tired in the afternoon.</p>
+             <p>James knows that coffee keeps him from getting tired. But, he almost never drinks coffee.</p>
+             <p>One day, James spends the morning doing paperwork. This time, though, he orders a cup of coffee from the cafe after lunch.</p>
+             <p>However, the barista at the cafe is in a bad mood. So, he secretly gives James a cup of decaffeinated coffee, which looks and tastes the same as ordinary coffee but doesn’t provide energy.</p>
+             <p>So, James unknowingly drinks the decaffeinated coffee. As a result, he got very tired later that afternoon.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">James doing paperwork in the morning caused him to be tired in the afternoon.</p>`
+}, {
+  vignette: 'coffee', condition: 'adversarial', factor: 'double_preventer',
+  stimulus: `<p>James has a boring office job. Whenever he does paperwork, he always tends to be tired in the afternoon.</p>
+             <p>James knows that coffee keeps him from getting tired. But, he almost never drinks coffee.</p>
+             <p>One day, James spends the morning doing paperwork. This time, though, he orders a cup of coffee from the cafe after lunch.</p>
+             <p>However, the barista at the cafe is in a bad mood. So, he secretly gives James a cup of decaffeinated coffee, which looks and tastes the same as ordinary coffee but doesn’t provide energy.</p>
+             <p>So, James unknowingly drinks the decaffeinated coffee. As a result, he got very tired later that afternoon.</p>
+             <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
+             <p style="text-align: center;">The barista giving James decaffeinated coffee caused him to be tired in the afternoon.</p>`
+}]
+
+
+/* Randomly assign a condition */
+var id = jsPsych.randomization.randomID();
+var v = jsPsych.randomization.sampleWithoutReplacement(vignettes, 1)[0];
+console.log('ID: ' + id);
+console.log('Vignette: ' + v.vignette);
+console.log('Condition: ' + v.condition);
+console.log('Factor: ' + v.factor);
+
+// Obtain a single version of each vignette randomly (use for within-participant design)
+//var VIGNETTES = [...new Set(v.map(x => x.vignette))].map(x => jsPsych.randomization.sampleWithoutReplacement(v.filter(o => o.vignettte == x), 1)[0]);
+
+/* Capture info from Prolific */
+jsPsych.data.addProperties({
+    id: id,
+    vignette: v.vignette,
+    condition: v.condition,
+    factor: v.factor,
+    prolific_id: jsPsych.data.getURLVariable('PROLIFIC_PID'),
+    study_id: jsPsych.data.getURLVariable('STUDY_ID'),
+    session_id: jsPsych.data.getURLVariable('SESSION_ID')
+});
+
+/* Get informed consent */
+var consent = {
+    type: jsPsychExternalHtml,
+    url: "consent.html",
+    cont_btn: "start",
+    check_fn: function () {
+      if (!document.getElementById('consent_checkbox').checked) {
+          alert("If you wish to participate, you must check the box next to the statement 'I consent to participate in this study.'");
+          return false;
+      }
+      return true;
+    }
+};
+
+/* Display instructions */
+var instructions = {
+  type: jsPsychInstructions,
+  pages: ['<p>In this study you will be asked to read one short story and to answer one question about that story.</p>' +
+          '<p><strong>Please take your time to read the story and respond to the question carefully.</strong></p>'],
+  show_clickable_nav: true
+};
+
+/* Display vignette and record causal judgment */
+var vignette = {
+  type: jsPsychHtmlSliderResponse,
+  min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
+  labels: ['strongly disagree', 'neither agree nor disagree', 'strongly agree'],
+  stimulus: '<div style="text-align: left;">' + v.stimulus + '</div>',
+  data: { measure: 'vignette' },
+
+  // Hide the slider thumb until response
+  on_load: function () {
+      document.getElementById('jspsych-html-slider-response-response').classList.add('hidden');
+      document.getElementById('jspsych-html-slider-response-response').addEventListener('click', function (e) {
+          e.target.classList.remove('hidden');
+      });
+  }
+};
+
+/* Display post-questionnaire */
+var age = {
+    timeline: [{type: jsPsychSurveyText,
+		  questions: [{name: "age", prompt: "What is your age?", required: true}],
+		  on_finish: function (data) {
+		    data.measure = "age";
+        data.response = parseInt(data.response.age);
+		  }}],
+    loop_function: function (data) {
+  	  let response = parseInt(data.values()[0].response);
+  	  if (isNaN(response)) alert("Please enter in your age as a number.");
+  	  if (!isNaN(response) & (response <= 0 || response > 150)) alert("Please enter a valid age.");
+  	  return isNaN(response) || response <= 0 || response > 150;
+    }
+};
+
+var gender = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [{name: 'gender', type: 'multi-choice', prompt: 'What is your gender?',
+               options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']),
+               option_reorder: 'random', required: true}],
+  on_finish: function (data) {
+    data.measure = "gender";
+    data.response = data.response.gender;
+  }
+};
+
+var attn_check = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [{name: 'attn_check', type: 'multi-choice', required: true,
+  prompt: `<p align='left'>Please be honest when answering the following question.
+           <b>Your answer will not affect your payment or eligibility for future studies.</b></p>
+           <p align='left'>The study you have just participated in is a psychological study aimed at understanding human cognition and behavior.
+            Psychological research depends on participants like you.
+            Your responses to surveys like this one are an incredibly valuable source of data for researchers.
+            It is therefore crucial for research that participants pay attention, avoid distractions,
+            and take all study tasks seriously (even when they might seem silly).</p>
+           <p align='left'><b>Do you feel that you paid attention, avoided distractions, and took this survey seriously?</b></p>`,
+  options: jsPsych.randomization.shuffle(["No, I was distracted.",
+                                          "No, I had trouble paying attention",
+                            						  "No, I did not take the study seriously",
+                            						  "No, something else affected my participation negatively.",
+                            						  "Yes."])
+	  }],
+    on_finish: function (data) {
+      data.measure = "attention_check";
+      data.response = data.response.attn_check;
+    }
+};
+
+var comments = {
+    type: jsPsychSurveyText,
+    questions: [{name: 'comments', type: 'text', prompt: "Do you have anything else to add (comments, questions, etc)?", rows: 10}],
+    on_finish: function (data) {
+      data.measure = "comments";
+      data.response = data.response.comments;
+    }
+}
+
+/* start the experiment */
+jsPsych.run([consent, instructions, vignette, age, gender, attn_check, comments]);
+</script>
