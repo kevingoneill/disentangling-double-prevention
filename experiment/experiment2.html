@@ -29,7 +29,7 @@
 <script>
 // Set up jsPsych
 var jsPsych = initJsPsych({
-    experiment_width: 800,
+    experiment_width: 600,
     on_finish: async function (data) {
       // Display completion screen
       jsPsych.getDisplayElement().innerHTML =
@@ -98,40 +98,40 @@ var vignettes = [{
 
 {
   vignette: 'heartworm', condition: 'reversal', factor: 'productive_factor',
-  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitoes that carry heartworm.</p>
              <p>Ted regularly gives his dog heartworm medication on the first day of every month to prevent a heartworm infection.</p>
-             <p>On July 1, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
-             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
-             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <p>On the first of this month, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the heartworm medication, Ted gives his dog a treat.</p>
+             <p>That day, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
              <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
              <p style="text-align: center;">The mosquito biting Ted’s dog caused Ted’s dog to have heartworm.</p>`
 }, {
   vignette: 'heartworm', condition: 'reversal', factor: 'double_preventer',
-  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitoes that carry heartworm.</p>
              <p>Ted regularly gives his dog heartworm medication on the first day of every month to prevent a heartworm infection.</p>
-             <p>On July 1, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
-             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
-             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <p>On the first of this month, Ted goes to get his dog’s heartworm medication from the closet as scheduled.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the heartworm medication, Ted gives his dog a treat.</p>
+             <p>That day, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
              <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
-             <p style="text-align: center;">Ted’s roommate switching the medicine caused Ted’s dog to have heartworm.</p>`
+             <p style="text-align: center;">Ted’s roommate switching the medication caused Ted’s dog to have heartworm.</p>`
 }, {
   vignette: 'heartworm', condition: 'adversarial', factor: 'productive_factor',
-  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitoes that carry heartworm.</p>
              <p>Despite knowing this, Ted rarely gives his dog heartworm medication.</p>
-             <p>On July 1, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
-             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
-             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <p>On the first of this month, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the heartworm medication, Ted gives his dog a treat.</p>
+             <p>That day, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
              <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
              <p style="text-align: center;">The mosquito biting Ted’s dog caused Ted’s dog to have heartworm.</p>`
 }, {
   vignette: 'heartworm', condition: 'adversarial', factor: 'double_preventer',
-  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitos that carry heartworm.</p>
+  stimulus: `<p>Ted has a dog. In the area where he lives, there are many mosquitoes that carry heartworm.</p>
              <p>Despite knowing this, Ted rarely gives his dog heartworm medication.</p>
-             <p>On July 1, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
-             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the medicine, Ted gives his dog a treat.</p>
-             <p>That month, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
+             <p>On the first of this month, though, Ted goes to get his dog’s heartworm medication from the closet.</p>
+             <p>Ted’s roomate, however, hates Ted’s dog. Secretly, Ted’s roommate switched the medication with dog treats that look just like the original medication but have no preventative effect for heartworm. Thinking he is giving his dog the heartworm medication, Ted gives his dog a treat.</p>
+             <p>That day, Ted’s dog was bitten by a mosquito infected with heartworm. As a result, Ted’s dog developed heartworm.</p>
              <br><p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>
-             <p style="text-align: center;">Ted’s roommate switching the medicine caused Ted’s dog to have heartworm.</p>`
+             <p style="text-align: center;">Ted’s roommate switching the medication caused Ted’s dog to have heartworm.</p>`
 },
 
 {
@@ -347,12 +347,12 @@ var attn_check = {
             Your responses to surveys like this one are an incredibly valuable source of data for researchers.
             It is therefore crucial for research that participants pay attention, avoid distractions,
             and take all study tasks seriously (even when they might seem silly).</p>
-           <p align='left'><b>Do you feel that you paid attention, avoided distractions, and took this survey seriously?</b></p>`,
-  options: jsPsych.randomization.shuffle(["No, I was distracted.",
-                                          "No, I had trouble paying attention",
-                            						  "No, I did not take the study seriously",
-                            						  "No, something else affected my participation negatively.",
-                            						  "Yes."])
+           <b>Do you feel that you paid attention, avoided distractions, and took this survey seriously?</b>`,
+  options: ["No, I was distracted.",
+	    "No, I had trouble paying attention",
+	    "No, I did not take the study seriously",
+	    "No, something else affected my participation negatively.",
+	    "Yes."]
 	  }],
     on_finish: function (data) {
       data.measure = "attention_check";
