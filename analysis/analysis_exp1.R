@@ -7,6 +7,10 @@ library(loo)
 library(ggdist)
 library(bayesplot)
 
+PALETTE <- c("#E61C38", "#C0C0C0", "#0B7189")
+PALETTE2 <- colorblind_pal()(3)[c(3, 2)] ##c("#006494", "#65743A")
+
+
 ## Convert the data d to be used by stan
 ## d: the dataframe to embed as a list for stan
 ## prior_only: if true, simulate from the prior (not the posterior)
@@ -56,12 +60,13 @@ draws %>%
     stat_slab(aes(y=cause, side=ifelse(factor=='productive_factor', 'left', 'right')),
               data=d, position=position_dodge(.2)) +
     stat_pointinterval(aes(y=.value, group=factor, justification=ifelse(factor=='productive_factor', 1, 0)),
-                       point_interval=median_hdi, position=position_dodge(.2)) +
-    scale_x_discrete(name='Vignette', labels=c('Base', 'Reversal', 'Adversarial')) +
-    scale_fill_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer')) +
+                       point_interval=median_hdi, .width=.95, position=position_dodge(.2)) +
+    scale_x_discrete(name='', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_y_continuous(expand=c(0, 0), labels=c('0', '.25', '.5', '.75', '1')) +
+    scale_fill_manual(name='', labels=c('Productive\nFactor', 'Double\nPreventer'), values=PALETTE) +
     ylab('Causal Judgment') +
-    theme_classic()
-ggsave('plots/experiment1_means.png', width=6, height=5)
+    theme_classic(base_size=18)
+ggsave('plots/experiment1_means.png', width=7, height=5)
 
 
 ## contrast mean judgments of each factor within vignettes
@@ -76,36 +81,38 @@ contr.factor %>%
 
 contr.factor %>%
     filter(.variable=='e_pred') %>%
-    ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ggplot(aes(x=vignette, y=.value, fill=vignette)) +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95, show.legend=FALSE) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_x_discrete(name='Condition', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_fill_manual(values=c('grey80', PALETTE2)) +
     ylab('Double Prevention Effect\n(Productive Factor - Double Preventer)') +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_factor_epred.png', width=6, height=5)
 
 contr.factor %>%
     filter(.variable=='mu') %>%
-    ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ggplot(aes(x=vignette, y=.value, fill=vignette)) +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95, show.legend=FALSE) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_x_discrete(name='Condition', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_fill_manual(values=c('grey80', PALETTE2)) +
     ylab('Double Prevention Effect\n(Productive Factor - Double Preventer)') +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_factor_mu.png', width=6, height=5)
 
 contr.factor %>%
     filter(.variable=='phi') %>%
-    ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ggplot(aes(x=vignette, y=.value, fill=vignette)) +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95, show.legend=FALSE) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Base', 'Reversal', 'Adversarial')) +
-    ylab('Double Prevention Effect on Variance\n(Productive Factor - Double Preventer)') +
-    coord_cartesian(ylim=c(-5, 5)) +
-    theme_classic()
+    scale_x_discrete(name='Condition', labels=c('Base', 'Reversal', 'Adversarial')) +
+    scale_fill_manual(values=c('grey80', PALETTE2)) +
+    ylab('Double Prevention Effect\n(Productive Factor - Double Preventer)') +
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_factor_phi.png', width=6, height=5)
 
 
@@ -123,37 +130,34 @@ contr.interaction %>%
 contr.interaction %>%
     filter(.variable=='e_pred') %>%
     ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
+    scale_x_discrete(name='Condition', labels=c('Reversal', 'Adversarial')) +
     ylab('Double Prevention Effect Compared to Base Case\n(Productive Factor - Double Preventer)') +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_interaction_epred.png', width=6, height=5)
-
 
 contr.interaction %>%
     filter(.variable=='mu') %>%
     ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
+    scale_x_discrete(name='Condition', labels=c('Reversal', 'Adversarial')) +
     ylab('Double Prevention Effect Compared to Base Case\n(Productive Factor - Double Preventer)') +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_interaction_mu.png', width=6, height=5)
-
 
 contr.interaction %>%
     filter(.variable=='phi') %>%
     ggplot(aes(x=vignette, y=.value)) +
-    stat_slab(aes(y=.prior)) +
-    stat_halfeye(point_interval=median_hdi, fill='skyblue') +
+    ##stat_slab(aes(y=.prior)) +
+    stat_halfeye(point_interval=median_hdi, .width=.95) +
     geom_hline(yintercept=0, linetype='dashed') +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
-    ylab('Double Prevention Effect on Variance Compared to Base Case\n(Productive Factor - Double Preventer)') +
-    coord_cartesian(ylim=c(-5, 5)) +
-    theme_classic()
+    scale_x_discrete(name='Condition', labels=c('Reversal', 'Adversarial')) +
+    ylab('Double Prevention Effect Compared to Base Case\n(Productive Factor - Double Preventer)') +
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_contrast_interaction_phi.png', width=6, height=5)
 
 
@@ -181,7 +185,6 @@ draws.ns <- fit.ns %>%
                  names_to=c('parameter', 'factor'), names_sep='_') %>%
     mutate(vignette=factor(levels(d.models$vignette)[vignette], levels=levels(d.models$vignette)),
            factor=factor(factor, levels=c('PC', 'DP', 'PP')))
-
 draws.ces <- fit.ces %>%
     spread_draws(p_PC, p_DP, p_PP[vignette], K_PC[vignette], K_DP[vignette]) %>%
     pivot_longer(c(starts_with('K_'), starts_with('p_')),
@@ -193,62 +196,68 @@ draws.ces <- fit.ces %>%
 draws.ns %>%
     filter(parameter=='K') %>%
     ggplot(aes(x=vignette, y=value, fill=factor)) +
-    stat_halfeye(scale=.75, point_interval=median_hdi) +
-    stat_pointinterval(aes(y=.value, color=factor, justification=ifelse(factor=='productive_factor', 1, 0)),
-                       point_interval=median_hdi, position=position_dodge(.5, preserve='single'), show.legend=FALSE,
-                       data=draws %>% filter(vignette!='base', .variable=='e_pred') %>% mutate(factor=factor(factor, labels=c('PC', 'DP')))) +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
+    stat_halfeye(scale=.75, point_interval=median_hdi, .width=.95) +
+    stat_pointinterval(aes(y=.value, color=factor),
+                           ##justification=ifelse(factor=='productive_factor', 1, 0)),
+                       point_interval=median_hdi, .width=.95,
+                       position=position_nudge(x=-.15), show.legend=FALSE,
+                       data=draws %>% filter(vignette!='base', .variable=='e_pred') %>%
+                           mutate(factor=factor(factor, labels=c('PC', 'DP')))) +
+    scale_x_discrete(name='', labels=c('Reversal', 'Adversarial')) +
     ylab('Predicted Causal Judgment') +
-    scale_fill_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer')) +
+    scale_fill_manual(name='', labels=c('Productive\nFactor', 'Double\nPreventer'), values=PALETTE) +
+    scale_color_manual(name='', labels=c('Productive\nFactor', 'Double\nPreventer'), values=PALETTE) +
     ggtitle('NS Model Fit') +
     ylim(0, 1) +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_ns.png', width=6, height=6)
 
 draws.ces %>%
     filter(parameter=='K') %>%
     ggplot(aes(x=vignette, y=value, fill=factor)) +
-    stat_halfeye(point_interval=median_hdi) +
-    stat_pointinterval(aes(y=.value, color=factor, justification=ifelse(factor=='productive_factor', 1, 0)),
-                       point_interval=median_hdi, position=position_dodge(.5, preserve='single'), show.legend=FALSE,
+    stat_halfeye(point_interval=median_hdi, .width=.95) +
+    stat_pointinterval(aes(y=.value, color=factor,
+                           justification=ifelse(factor=='productive_factor', 1, 0)),
+                       point_interval=median_hdi, .width=.95,
+                       position=position_nudge(x=-.15), show.legend=FALSE,
                        data=draws %>% filter(vignette!='base', .variable=='e_pred') %>% mutate(factor=factor(factor, labels=c('PC', 'DP')))) +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
+    scale_x_discrete(name='', labels=c('Reversal', 'Adversarial')) +
     ylab('Predicted Causal Judgment') +
-    scale_fill_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer')) +
+    scale_fill_manual(name='', labels=c('Productive\nFactor', 'Double\nPreventer'), values=PALETTE) +
+    scale_color_manual(name='', labels=c('Productive\nFactor', 'Double\nPreventer'), values=PALETTE) +
     ggtitle('CES Model Fit') +
     ylim(0, 1) +
-    theme_classic()
+    theme_classic(base_size=18)
 ggsave('plots/experiment1_ces.png', width=6, height=6)
 
 
 ## Plot model-estimated sampling probabilities
 draws.ns %>%
     filter(parameter=='p') %>%
-    ggplot(aes(x=vignette, y=value, fill=factor)) +
-    stat_slab(scale=.75, side='left', slab_alpha=.33) +
-    stat_pointinterval(aes(color=factor), scale=.75, side='left', slab_alpha=.33, show.legend=FALSE,
-                       position=position_dodge(-.25, preserve='single')) +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
-    ylab('Predicted Probability') +
-    scale_fill_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer', 'Possible\nPreventer')) +
-    ggtitle('NS Sampling Probabilities') +
-    ylim(0, 1) +
-    theme_classic()
-ggsave('plots/experiment1_ns_prob.png', width=6, height=6)
+    ggplot(aes(x=factor, y=value, fill=vignette, side=vignette)) +
+    stat_halfeye(scale=.75, point_interval=median_hdi, .width=.95,
+                 position=position_dodge(.2), show.legend=c(size=FALSE, side=FALSE)) +
+    scale_x_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer', 'Possible\nPreventer')) +
+    scale_side_mirrored(start='bottomleft') +
+    ylab('Predicted Probability of Imagining Event\n(Necessity-Sufficiency Model)') +
+    scale_fill_manual(name='', values=PALETTE2, labels=c('Reversal', 'Adversarial')) +
+    scale_y_continuous(limits=c(0, 1), expand=c(0,0), labels=c('0', '.25', '.5', '.75', '1')) +
+    theme_classic(base_size=18)
+ggsave('plots/experiment1_ns_prob.png', width=8, height=6)
+
 
 draws.ces %>%
     filter(parameter=='p') %>%
-    ggplot(aes(x=vignette, y=value, fill=factor)) +
-    stat_slab(scale=.75, side='left', slab_alpha=.33) +
-    stat_pointinterval(aes(color=factor), scale=.75, side='left', slab_alpha=.33, show.legend=FALSE,
-                       position=position_dodge(-.25, preserve='single')) +
-    scale_x_discrete(name='Vignette', labels=c('Reversal', 'Adversarial')) +
-    ylab('Predicted Probability') +
-    scale_fill_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer', 'Possible\nPreventer')) +
-    ggtitle('CES Sampling Probabilities') +
-    ylim(0, 1) +
-    theme_classic()
-ggsave('plots/experiment1_ces_prob.png', width=6, height=6)
+    ggplot(aes(x=factor, y=value, fill=vignette, side=vignette)) +
+    stat_halfeye(scale=.75, point_interval=median_hdi, .width=.95,
+                 position=position_dodge(.2), show.legend=c(size=FALSE, side=FALSE)) +
+    scale_x_discrete(name='', labels=c('Productive\nFactor', 'Double\nPreventer', 'Possible\nPreventer')) +
+    scale_side_mirrored(start='bottomleft') +
+    ylab('Predicted Probability of Imagining Event\n(Counterfactual Effect Size Model)') +
+    scale_fill_manual(name='', values=PALETTE2, labels=c('Reversal', 'Adversarial')) +
+    scale_y_continuous(limits=c(0, 1), expand=c(0,0), labels=c('0', '.25', '.5', '.75', '1')) +
+    theme_classic(base_size=18)
+ggsave('plots/experiment1_ces_prob.png', width=8, height=6)
 
 
 
