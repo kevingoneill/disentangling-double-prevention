@@ -124,20 +124,26 @@ generated quantities {
   }
 
   // vignette-average conditional parameters
-  vector[N_pred] mu = inv_logit(X_pred * b);
-  vector[N_pred] phi = exp(X_pred * b);
+  vector[N_pred] mu_logit = X_pred * b;
+  vector[N_pred] phi_log = X_pred * b_phi;
+  vector[N_pred] mu = inv_logit(mu_logit);
+  vector[N_pred] phi = exp(phi_log);
   vector[N_pred] p_0 = 1 - inv_logit(logit(mu) - cutpoints[1]);
   vector[N_pred] p_01 = inv_logit(logit(mu) - cutpoints[1]) - inv_logit(logit(mu) - cutpoints[2]);
   vector[N_pred] p_1 = inv_logit(logit(mu) - cutpoints[2]);
   vector[N_pred] e_pred = p_01.*mu + p_1;
 
   // conditional parameters per vignette
-  matrix[N_pred, V] mu_v;
-  matrix[N_pred, V] phi_v;
+  matrix[N_pred, V] mu_v_logit;
+  matrix[N_pred, V] phi_v_log;
   for (i in 1:V) {
-    mu_v[, i] = inv_logit(X_pred*b + X_V_pred*r_v[i]);
-    phi_v[, i] = exp(X_pred*b_phi + X_V_pred*r_v_phi[i]);
+    mu_v_logit[, i] = X_pred*b + X_V_pred*r_v[i];
+    phi_v_log[, i] = X_pred*b_phi + X_V_pred*r_v_phi[i];
   }
+
+  matrix[N_pred, V] mu_v = inv_logit(mu_v_logit);
+  matrix[N_pred, V] phi_v = exp(phi_v_log);
+  
   
   matrix[N_pred, V] p_0_v = 1 - inv_logit(logit(mu_v) - cutpoints[1]);
   matrix[N_pred, V] p_01_v = inv_logit(logit(mu_v) - cutpoints[1]) - inv_logit(logit(mu_v) - cutpoints[2]);
