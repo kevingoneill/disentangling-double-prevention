@@ -1,0 +1,307 @@
+<!Doctype html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <title>A study about causal reasoning</title>
+    <script src="https://unpkg.com/jspsych@7.3.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-external-html@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.3"></script>
+    <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" type="text/css">
+    </link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--- CSS classes to show/hide the slider thumb  --->
+    <style>
+        .hidden::-webkit-slider-thumb {
+            visibility: hidden;
+        }
+
+        .hidden::-moz-range-thumb {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="experiment"></div>
+</body>
+
+</html>
+
+<script>
+    // Set up jsPsych
+    var jsPsych = initJsPsych({
+        display_element: 'experiment',
+        experiment_width: 600,
+        on_finish: async function (data) {
+            // Display completion screen
+            jsPsych.getDisplayElement().innerHTML =
+                '<div><p>Thanks for completing this experiment!</p>' +
+                '<p>Saving your data now......' +
+                '<span id="done" style="visibility: hidden;">done!</span></p></div><br><br>' +
+                '<p>You will be automatically redirected back to Prolific once the data is saved.</p>';
+
+            //  Save data via HTTP POST
+            let dataToServer = {
+                'id': id,
+                'extension': 'csv',
+                'directory': 'data',
+                'experimentName': 'experiment3',
+                'curData': data.csv()
+            };
+            await $.post("https://dibs-web01.vm.duke.edu/debrigard/double-prevention-reversal/experiment/save.php",
+                dataToServer,
+                function (data) {
+                    document.getElementById('done').style.visibility = "visible";
+
+                    // Re-direct back to Prolific if  is present
+                    if (jsPsych.data.getURLVariable('PROLIFIC_PID') != null)
+                        setTimeout(function () {
+                            // TODO: fill in prolific code
+                            window.location = "https://app.prolific.co/submissions/complete?cc=XXXXXXXXX";
+                        }, 3000);
+                }).promise().catch(function () { });
+        }
+    });
+
+    /* Randomly assign a condition */
+    var id = jsPsych.randomization.randomID();
+    var conditions = {
+        condition: [
+            { name: 'reversal', p_PF: .9, p_PP: .9, p_DP: .1 },
+            { name: 'adversarial', p_PF: .9, p_PP: .1, p_DP: .1 }],
+        factor: ['productive_factor', 'double_preventer']
+    };
+
+    var condition = jsPsych.randomization.sampleWithoutReplacement(jsPsych.randomization.factorial(conditions, 1), 1)[0];
+    condition.num_learning = 10; // show this many trials to learn the probabilities
+    condition.p_PF = condition.condition.p_PF;
+    condition.p_PP = condition.condition.p_PP;
+    condition.p_DP = condition.condition.p_DP;
+    condition.condition = condition.condition.name;
+    console.log('ID: ' + id);
+    console.log('condition: ' + condition.condition);
+    console.log('P(PF): ' + condition.p_PF);
+    console.log('P(PP): ' + condition.p_PP);
+    console.log('P(DP): ' + condition.p_DP);
+    console.log('factor: ' + condition.factor);
+    console.log('number of learning trials: ' + condition.num_learning);
+
+    /* Create learning trial data */
+    var learning_params = new Array(condition.num_learning);
+    for (let i = 0; i < condition.num_learning; i++) {
+        let pf = jsPsych.randomization.sampleBernoulli(condition.p_PF);
+        let pp = jsPsych.randomization.sampleBernoulli(condition.p_PP);
+        let dp = jsPsych.randomization.sampleBernoulli(condition.p_DP);
+        let e = Number(pf && (!pp || dp));
+        learning_params[i] = { trial: i + 1, PF: pf, PP: pp, DP: dp, E: e };
+    }
+
+    /* Capture info from Prolific */
+    jsPsych.data.addProperties({
+        id: id,
+        prolific_id: jsPsych.data.getURLVariable('PROLIFIC_PID'),
+        study_id: jsPsych.data.getURLVariable('STUDY_ID'),
+        session_id: jsPsych.data.getURLVariable('SESSION_ID')
+    });
+    jsPsych.data.addProperties(condition);
+
+    /* Get informed consent */
+    var consent = {
+        type: jsPsychExternalHtml,
+        url: "consent.html",
+        cont_btn: "start",
+        check_fn: function () {
+            if (!document.getElementById('consent_checkbox').checked) {
+                alert("If you wish to participate, you must check the box next to the statement 'I consent to participate in this study.'");
+                return false;
+            }
+            return true;
+        }
+    };
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+            `<p>In this study you will be asked to learn the rules of a simple game, study ` + condition.num_learning +
+            ` plays of the game, and finally to read a short story and answer one question about that story.</p>
+            <p><strong>Please take your time to read the instructions and respond to the question carefully.</strong></p>`,
+
+            `<div align='left'><p>A carnival stand is hosting a game in which teams of three people each draw a ball
+                from three different boxes to win a prize. Each box contains a different mixture of balls that are either
+                black or gold. Players cannot see what is inside of the boxes. The game works like this:</p>
+            <p>Player A must draw a golden ball from Box A to win the prize. If Player A doesn't draw a golden ball from Box A, nobody wins a prize.</p>
+            <p>If Player B draws a golden ball from Box B, however, nobody wins a prize even if Player A drew a golden ball from Box A. </p>
+            <p>Finally, even if Player B drew a golden ball from Box B, they can still win the prize if Player C draws a golden ball from Box C.</p><br>
+            <p>So, overall, the three players win the prize if:
+                <ol>
+                    <li>Player A draws a golden ball from Box A, AND</li>
+                    <li>
+                        <ol type="a">
+                            <li>EITHER Player B doesn't draw a golden ball from Box B</li>
+                            <li>OR Player B draws a golden ball from Box B, but Player C draws a golden ball from Box C</li>
+                        </ol>
+                    </li>
+                </ol>
+            </p></div>`,
+
+            `<p>Over the course of the day, lots of people come to the carnival stand to play this game.
+                We will show you ` + condition.num_learning + ` different teams playing the game. 
+                To familiarize you with the rules of the game and the contents of each of the three boxes, 
+                please determine whether each team won the prize or not.</p>`
+        ],
+        show_clickable_nav: true
+    };
+
+    var learning = {
+        timeline: [{
+            timeline: [{
+                type: jsPsychHtmlButtonResponse,
+                stimulus: function () {
+                    trial = jsPsych.timelineVariable('trial');
+                    PF = jsPsych.timelineVariable('PF');
+                    PP = jsPsych.timelineVariable('PP');
+                    DP = jsPsych.timelineVariable('DP');
+                    E = jsPsych.timelineVariable('E');
+
+                    return '<p align="left">Team ' + trial + ' of ' + condition.num_learning + ':</p>' +
+                        '<p>Player A drew a <span style="font-weight: bold; color: ' + (PF ? 'gold' : 'black') + ';">' + (PF ? 'golden' : 'black') + '</span> ball.<br>' +
+                        'Player B drew a <span style="font-weight: bold; color: ' + (PP ? 'gold' : 'black') + ';">' + (PP ? 'golden' : 'black') + '</span> ball.<br>' +
+                        'Player C drew a <span style="font-weight: bold; color: ' + (DP ? 'gold' : 'black') + ';">' + (DP ? 'golden' : 'black') + '</span> ball.</p><br>' +
+                        '<strong>Based on these results, did Team ' + trial + ' win a prize?</strong><br><br>'
+                },
+                choices: ['No', 'Yes'],
+                post_trial_gap: 500,
+                data: function () {
+                    return {
+                        PF: jsPsych.timelineVariable('PF'),
+                        PP: jsPsych.timelineVariable('PP'),
+                        DP: jsPsych.timelineVariable('DP'),
+                        E: jsPsych.timelineVariable('E')
+                    }
+                }
+            }],
+            // each trial, check for the correct response and repeat if incorrect
+            loop_function: function (d) {
+                if (d.values()[0].response != d.values()[0].E) {
+                    alert("Incorrect, please try again.\n\nRemember that the team gets a prize if Player A draws a golden ball, and if either Player B doesn't draw a golden ball or if Player B draws a golden ball but Player C also draws a golden ball.");
+                    return true;
+                }
+
+                return false;
+            }
+        }],
+        timeline_variables: learning_params
+    };
+
+    var vignette = {
+        timeline: [{
+            type: jsPsychHtmlSliderResponse,
+            min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
+            labels: ['strongly disagree', 'neither agree nor disagree', 'strongly agree'],
+            stimulus: function () {
+                let question = 'Ashley, Brittney, and Chloe won the prize because Ashley drew a golden ball from Box A.';
+                if (jsPsych.timelineVariable('factor') == 'double_preventer')
+                    question = 'Ashley, Brittney, and Chloe won the prize because Chloe drew a golden ball from Box C.';
+
+                return `<p>Ashley, Brittney, and Chloe came to the carnival stand to play the game.
+                            Remember that they win the game if Ashley draws a golden ball from Box A, and if either
+                            Brittney doesn't draw a golden ball from Box B, or if Brittney draws a golden ball from Box B 
+                            but Chloe draws a golden ball from Box C.</p>
+                        <p>Ashley, Brittney, and Chloe reach into Box A, B, and C, respectively. 
+                        At the same time, all three of them drew a golden ball. So, they won the prize.</p><br>
+                        <p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>` +
+                    '<p>' + question + '</p>';
+            },
+            data: function () {
+                return {
+                    measure: 'vignette',
+                    condition: jsPsych.timelineVariable('condition'),
+                    factor: jsPsych.timelineVariable('factor')
+                }
+            },
+
+            // Hide the slider thumb until response
+            on_load: function () {
+                document.getElementById('jspsych-html-slider-response-response').classList.add('hidden');
+                document.getElementById('jspsych-html-slider-response-response').addEventListener('click', function (e) {
+                    e.target.classList.remove('hidden');
+                });
+            }
+        }],
+        timeline_variables: [condition]
+    };
+
+
+    /* Display post-questionnaire */
+    var age = {
+        timeline: [{
+            type: jsPsychSurveyText,
+            questions: [{ name: "age", prompt: "What is your age?", required: true }],
+            on_finish: function (data) {
+                data.measure = "age";
+                data.response = parseInt(data.response.age);
+            }
+        }],
+        loop_function: function (data) {
+            let response = parseInt(data.values()[0].response);
+            if (isNaN(response)) alert("Please enter in your age as a number.");
+            if (!isNaN(response) & (response <= 0 || response > 150)) alert("Please enter a valid age.");
+            return isNaN(response) || response <= 0 || response > 150;
+        }
+    };
+
+    var gender = {
+        type: jsPsychSurveyMultiChoice,
+        questions: [{
+            name: 'gender', type: 'multi-choice', prompt: 'What is your gender?',
+            options: jsPsych.randomization.shuffle(['Male', 'Female', 'Other']),
+            option_reorder: 'random', required: true
+        }],
+        on_finish: function (data) {
+            data.measure = "gender";
+            data.response = data.response.gender;
+        }
+    };
+
+    var attn_check = {
+        type: jsPsychSurveyMultiChoice,
+        questions: [{
+            name: 'attn_check', type: 'multi-choice', required: true,
+            prompt: `<p align='left'> Please be honest when answering the following question.
+                    <b> Your answer will not affect your payment or eligibility for future studies.</b></p>
+                    <p align='left'>The study you have just participated in is a psychological study aimed at understanding human cognition and behavior.
+                    Psychological research depends on participants like you.
+                    Your responses to surveys like this one are an incredibly valuable source of data for researchers.
+                    It is therefore crucial for research that participants pay attention, avoid distractions,
+                    and take all study tasks seriously (even when they might seem silly).</p>
+                    <p align='left'><b>Do you feel that you paid attention, avoided distractions, and took this survey seriously?</b></p>`,
+            options: jsPsych.randomization.shuffle(["No, I was distracted.",
+                "No, I had trouble paying attention",
+                "No, I did not take the study seriously",
+                "No, something else affected my participation negatively.",
+                "Yes."])
+        }],
+        on_finish: function (data) {
+            data.measure = "attention_check";
+            data.response = data.response.attn_check;
+        }
+    };
+
+    var comments = {
+        type: jsPsychSurveyText,
+        questions: [{ name: 'comments', type: 'text', prompt: "Do you have anything else to add (comments, questions, etc)?", rows: 10 }],
+        on_finish: function (data) {
+            data.measure = "comments";
+            data.response = data.response.comments;
+        }
+    }
+
+    /* start the experiment */
+    jsPsych.run([consent, instructions, learning, vignette, age, gender, attn_check, comments]);
+</script>
