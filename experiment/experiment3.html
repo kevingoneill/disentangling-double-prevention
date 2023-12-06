@@ -153,7 +153,8 @@
             `<p>Over the course of the day, lots of people come to the carnival stand to play this game.
                 We will show you ` + condition.num_learning + ` different teams playing the game. 
                 To familiarize you with the rules of the game and the contents of each of the three boxes, 
-                please determine whether each team won the prize or not.</p>`
+                please determine whether or not each team won the prize.</p>
+            <p><strong>Please pay attention to the contents of each box.</strong></p>`
         ],
         show_clickable_nav: true
     };
@@ -170,9 +171,9 @@
                     E = jsPsych.timelineVariable('E');
 
                     return '<p align="left">Team ' + trial + ' of ' + condition.num_learning + ':</p>' +
-                        '<p>Player A drew a <span style="font-weight: bold; color: ' + (PF ? 'gold' : 'black') + ';">' + (PF ? 'golden' : 'black') + '</span> ball.<br>' +
-                        'Player B drew a <span style="font-weight: bold; color: ' + (PP ? 'gold' : 'black') + ';">' + (PP ? 'golden' : 'black') + '</span> ball.<br>' +
-                        'Player C drew a <span style="font-weight: bold; color: ' + (DP ? 'gold' : 'black') + ';">' + (DP ? 'golden' : 'black') + '</span> ball.</p><br>' +
+                        '<p>Player A drew a <span style="font-weight: bold; color: ' + (PF ? 'gold' : 'black') + ';">' + (PF ? 'golden' : 'black') + '</span> ball from Box A.<br>' +
+                        'Player B drew a <span style="font-weight: bold; color: ' + (PP ? 'gold' : 'black') + ';">' + (PP ? 'golden' : 'black') + '</span> ball from Box B.<br>' +
+                        'Player C drew a <span style="font-weight: bold; color: ' + (DP ? 'gold' : 'black') + ';">' + (DP ? 'golden' : 'black') + '</span> ball from Box C.</p><br>' +
                         '<strong>Based on these results, did Team ' + trial + ' win a prize?</strong><br><br>'
                 },
                 choices: ['No', 'Yes'],
@@ -199,6 +200,41 @@
         timeline_variables: learning_params
     };
 
+    var manipulation_check = {
+        timeline: [{
+            type: jsPsychHtmlSliderResponse,
+            min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
+            labels: ['only <span style="font-weight: bold; color: black;">black</span> balls', 
+                     'half <span style="font-weight: bold; color: black;">black</span> and half <span style="font-weight: bold; color: gold;">golden</span> balls', 
+                     'only <span style="font-weight: bold; color: gold;">golden</span> balls'],
+            stimulus: function () {
+                return '<p>What is inside of Box ' + jsPsych.timelineVariable('box') + '?</p>'
+            },
+            data: function () {
+                return {
+                    measure: 'manipulation_check',
+                    box_factor: jsPsych.timelineVariable('box_factor'),
+                    box: jsPsych.timelineVariable('box')
+                }
+            },
+            // Hide the slider thumb until response
+            on_load: function () {
+                document.getElementById('jspsych-html-slider-response-response').classList.add('hidden');
+                document.getElementById('jspsych-html-slider-response-response').addEventListener('click', function (e) {
+                    e.target.classList.remove('hidden');
+                });
+            }
+        }],
+        timeline_variables: [{box_factor: 'PF', box: 'A'}, {box_factor: 'PP', box: 'B'}, {box_factor: 'DP', box: 'C'}]
+    }
+
+    var vignette_instructions = {
+        type: jsPsychInstructions,
+        pages: [`<p>Now that you are familiar with the rules of the game and the contents of each box, we will tell you about one more team playing the game and ask you about what happened.</p>
+                 <p><strong>Please take your time to read the story and respond to the question carefully.</strong></p>`],
+        show_clickable_nav: true
+    };
+
     var vignette = {
         timeline: [{
             type: jsPsychHtmlSliderResponse,
@@ -209,12 +245,15 @@
                 if (jsPsych.timelineVariable('factor') == 'double_preventer')
                     question = 'Ashley, Brittney, and Chloe won the prize because Chloe drew a golden ball from Box C.';
 
-                return `<p>Ashley, Brittney, and Chloe came to the carnival stand to play the game.
+                return `<p>Next, Ashley, Brittney, and Chloe came to the carnival stand to play the game.
                             Remember that they win the game if Ashley draws a golden ball from Box A, and if either
                             Brittney doesn't draw a golden ball from Box B, or if Brittney draws a golden ball from Box B 
                             but Chloe draws a golden ball from Box C.</p>
-                        <p>Ashley, Brittney, and Chloe reach into Box A, B, and C, respectively. 
-                        At the same time, all three of them drew a golden ball. So, they won the prize.</p><br>
+
+                        <p>At the same time, Ashley, Brittney, and Chloe draw balls from Box A, Box B, and Box C, respectively. Here's what they got:</p>
+                        <p>Ashley drew a <span style="font-weight: bold; color: gold;">golden</span> ball from Box A.<br>
+                        Brittney drew a <span style="font-weight: bold; color: gold;">golden</span> ball from Box B.<br>
+                        Chloe drew a <span style="font-weight: bold; color: gold;">golden</span> ball from Box C.</p><br>
                         <p style="text-align: center;"><strong>To what degree do you agree with the following statement?</strong></p>` +
                     '<p>' + question + '</p>';
             },
@@ -303,5 +342,5 @@
     }
 
     /* start the experiment */
-    jsPsych.run([consent, instructions, learning, vignette, age, gender, attn_check, comments]);
+    jsPsych.run([consent, instructions, learning, manipulation_check, vignette_instructions, vignette, age, gender, attn_check, comments]);
 </script>
