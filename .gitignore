@@ -2,8 +2,24 @@
 experiment/data
 **/*.*~
 **/*.DS_Store
+**/*.rds
 .Rhistory
 .Rapp.history
+
+# raw data files
+analysis/data/experiment2
+
+# Stan executables
+analysis/counterfactual_effect_size
+analysis/counterfactual_effect_size_vignette
+analysis/necessity_sufficiency
+analysis/necessity_sufficiency_vignette
+analysis/ordbeta
+analysis/ordbeta_vignette
+simulations/power_analysis/ordbeta
+simulations/power_analysis/ordbeta_pred
+simulations/model_comparison/counterfactual_effect_size
+simulations/model_comparison/necessity_sufficiency
 
 # Session Data files
 .RData
