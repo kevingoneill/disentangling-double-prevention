@@ -79,7 +79,7 @@
     };
 
     var condition = jsPsych.randomization.sampleWithoutReplacement(jsPsych.randomization.factorial(conditions, 1), 1)[0];
-    condition.num_learning = 10; // show this many trials to learn the probabilities
+    condition.num_learning = 20; // show this many trials to learn the probabilities
     condition.p_PF = condition.condition.p_PF;
     condition.p_PP = condition.condition.p_PP;
     condition.p_DP = condition.condition.p_DP;
@@ -93,14 +93,24 @@
     console.log('number of learning trials: ' + condition.num_learning);
 
     /* Create learning trial data */
+    function bernoulli_array(N, p) {
+        let N_1 = Math.round(N * p);
+        let N_0 = N - N_1;
+        return jsPsych.randomization.shuffle(new Array(N_1).fill(1).concat(new Array(N_0).fill(0)));
+    }
+
+    var PF = bernoulli_array(condition.num_learning, condition.p_PF);
+    var PP = bernoulli_array(condition.num_learning, condition.p_PP);
+    var DP = bernoulli_array(condition.num_learning, condition.p_DP);
     var learning_params = new Array(condition.num_learning);
     for (let i = 0; i < condition.num_learning; i++) {
-        let pf = jsPsych.randomization.sampleBernoulli(condition.p_PF);
-        let pp = jsPsych.randomization.sampleBernoulli(condition.p_PP);
-        let dp = jsPsych.randomization.sampleBernoulli(condition.p_DP);
-        let e = Number(pf && (!pp || dp));
-        learning_params[i] = { trial: i + 1, PF: pf, PP: pp, DP: dp, E: e };
+        let E = Number(PF[i] && (!PP[i] || DP[i]));
+        learning_params[i] = { trial: i + 1, PF: PF[i], PP: PP[i], DP: DP[i], E: E };
     }
+
+    console.log('PF: ' + PF.reduce((a,b) => a+b, 0) / condition.num_learning);
+    console.log('PP: ' + PP.reduce((a, b) => a + b, 0) / condition.num_learning);
+    console.log('DP: ' + DP.reduce((a, b) => a + b, 0) / condition.num_learning);
 
     /* Capture info from Prolific */
     jsPsych.data.addProperties({
@@ -132,13 +142,11 @@
             ` plays of the game, and finally to read a short story and answer one question about that story.</p>
             <p><strong>Please take your time to read the instructions and respond to the question carefully.</strong></p>`,
 
-            `<div align='left'><p>A carnival stand is hosting a game in which teams of three people each draw a ball
-                from three different boxes to win a prize. Each box contains a different mixture of balls that are either
-                black or gold. Players cannot see what is inside of the boxes. The game works like this:</p>
-            <p>Player A must draw a golden ball from Box A to win the prize. If Player A doesn't draw a golden ball from Box A, nobody wins a prize.</p>
-            <p>If Player B draws a golden ball from Box B, however, nobody wins a prize even if Player A drew a golden ball from Box A. </p>
-            <p>Finally, even if Player B drew a golden ball from Box B, they can still win the prize if Player C draws a golden ball from Box C.</p><br>
-            <p>So, overall, the three players win the prize if:
+            `<div align='left'><p>A carnival stand is hosting a game in which a team of three people tries to win a prize by drawing balls
+                from three different boxes. Each box contains a different mixture of balls that are either
+                black or gold. Players cannot see what is inside of the boxes.</p>
+            
+            <p>The three players win each win a prize if:
                 <ol>
                     <li>Player A draws a golden ball from Box A, AND</li>
                     <li>
@@ -151,10 +159,10 @@
             </p></div>`,
 
             `<p>Over the course of the day, lots of people come to the carnival stand to play this game.
-                We will show you ` + condition.num_learning + ` different teams playing the game. 
+                We will show you the results of ` + condition.num_learning + ` different teams playing the game. 
                 To familiarize you with the rules of the game and the contents of each of the three boxes, 
                 please determine whether or not each team won the prize.</p>
-            <p><strong>Please pay attention to the contents of each box.</strong></p>`
+            <p><strong>Please pay attention to the contents of each box. You will be asked later to determine what is inside each box.</strong></p>`
         ],
         show_clickable_nav: true
     };
@@ -177,7 +185,7 @@
                         '<strong>Based on these results, did Team ' + trial + ' win a prize?</strong><br><br>'
                 },
                 choices: ['No', 'Yes'],
-                post_trial_gap: 500,
+                post_trial_gap: 100,
                 data: function () {
                     return {
                         PF: jsPsych.timelineVariable('PF'),
@@ -186,15 +194,32 @@
                         E: jsPsych.timelineVariable('E')
                     }
                 }
+            }, {
+                type: jsPsychInstructions,
+                pages: function () {
+                    let r = jsPsych.data.getLastTrialData().values()[0].response;
+                    let e = jsPsych.data.getLastTrialData().values()[0].E;
+                    let s = '<p style="font-weight: bold; color: green;">Correct!</p>';
+                    if (r != e) {
+                        s = `<p style="font-weight: bold; color: red;">Incorrect, please try again.</p>
+                            <div align='left'><p>Remember that the three players win the prize if:
+                                <ol>
+                                    <li>Player A draws a golden ball from Box A, AND</li>
+                                    <li>
+                                        <ol type="a">
+                                            <li>EITHER Player B doesn't draw a golden ball from Box B</li>
+                                            <li>OR Player B draws a golden ball from Box B, but Player C draws a golden ball from Box C</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </p></div>`;
+                    }
+                    return ['<p align="left">Team ' + trial + ' of ' + condition.num_learning + ':</p>' + s];
+                }, show_clickable_nav: true
             }],
             // each trial, check for the correct response and repeat if incorrect
             loop_function: function (d) {
-                if (d.values()[0].response != d.values()[0].E) {
-                    alert("Incorrect, please try again.\n\nRemember that the team gets a prize if Player A draws a golden ball, and if either Player B doesn't draw a golden ball or if Player B draws a golden ball but Player C also draws a golden ball.");
-                    return true;
-                }
-
-                return false;
+                return d.values()[0].response != d.values()[0].E;
             }
         }],
         timeline_variables: learning_params
@@ -204,9 +229,9 @@
         timeline: [{
             type: jsPsychHtmlSliderResponse,
             min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
-            labels: ['only <span style="font-weight: bold; color: black;">black</span> balls', 
-                     'half <span style="font-weight: bold; color: black;">black</span> and half <span style="font-weight: bold; color: gold;">golden</span> balls', 
-                     'only <span style="font-weight: bold; color: gold;">golden</span> balls'],
+            labels: ['only <span style="font-weight: bold; color: black;">black</span> balls',
+                'half <span style="font-weight: bold; color: black;">black</span> and half <span style="font-weight: bold; color: gold;">golden</span> balls',
+                'only <span style="font-weight: bold; color: gold;">golden</span> balls'],
             stimulus: function () {
                 return '<p>What is inside of Box ' + jsPsych.timelineVariable('box') + '?</p>'
             },
@@ -225,13 +250,13 @@
                 });
             }
         }],
-        timeline_variables: [{box_factor: 'PF', box: 'A'}, {box_factor: 'PP', box: 'B'}, {box_factor: 'DP', box: 'C'}]
+        timeline_variables: [{ box_factor: 'PF', box: 'A' }, { box_factor: 'PP', box: 'B' }, { box_factor: 'DP', box: 'C' }]
     }
 
     var vignette_instructions = {
         type: jsPsychInstructions,
         pages: [`<p>Now that you are familiar with the rules of the game and the contents of each box, we will tell you about one more team playing the game and ask you about what happened.</p>
-                 <p><strong>Please take your time to read the story and respond to the question carefully.</strong></p>`],
+                 <p><strong>Please take your time to read the story and respond carefully.</strong></p>`],
         show_clickable_nav: true
     };
 
