@@ -299,9 +299,9 @@
             min: 0, max: 1, step: 'any', slider_start: .5, require_movement: true,
             labels: ['strongly disagree', 'neither agree nor disagree', 'strongly agree'],
             stimulus: function () {
-                let question = 'Yolanda won the dollar because she drew a yellow ball from Box A.';
+                let question = 'Yolanda drawing a yellow ball from Box A caused her to win the dollar.';
                 if (jsPsych.timelineVariable('factor') == 'double_preventer')
-                    question = 'Yolanda won the dollar because she drew a yellow ball from Box C.';
+                    question = 'Yolanda drawing a yellow ball from Box C caused her to win the dollar.';
 
                 return `<p>Next, ` + color('Yolanda', YELLOW) + ` and ` + color('Bella', BLUE) + ` came to the carnival stand to play the game.
                         Remember that ` + color('Yolanda', YELLOW) + ` wins the dollar if ` + color('she draws a yellow ball from Box A', YELLOW) + `, and if either ` + 
