@@ -144,8 +144,8 @@
     var instructions = {
         type: jsPsychInstructions,
         pages: [
-            `<p>In this study you will be asked to learn the rules of a simple game, study ` + condition.num_learning +
-            ` plays of the game, and finally to read a short story and answer one question about that story.</p>
+            `<p>In this study, you will be asked to learn the rules of a simple game, study ` + condition.num_learning +
+            ` plays of the game, and then read a short story and answer one question about that story.</p>
             <p><strong>Please take your time to read the instructions and respond to the question carefully.</strong></p>`,
 
             `<div align='left'><p>
@@ -153,8 +153,7 @@
                 In this game, there are three boxes (Boxes A, B, and C) with some mixture of ` + color('yellow', YELLOW) + `, ` + color('blue', BLUE) + `, and ` + color('gray', GRAY) + ` balls. 
                 Yellow balls tend to benefit the yellow player, blue balls tend to benefit the blue player, and gray balls don’t do anything.
                 The players can't see into the boxes, so they don’t know how many balls of each color there are inside of each box.
-            </p><p><strong>The rules of the game are summarized in this image:</strong></p></div>
-            <img src='stimulus.png' style='width: 66%;'></img><br>
+            </p></div>
             <div align='left'><p>
                 The yellow player draws a ball from Box A, which contains yellow and blue balls.
                 If the ` + color('yellow player draws a yellow ball from Box A', YELLOW) + `, then they win the dollar.
@@ -178,11 +177,12 @@
                         </ol>
                     </li>
                 </ol>
-                Otherwise, the ` + color('blue player wins the dollar', BLUE) + `.</p></div>`,
+                Otherwise, the ` + color('blue player wins the dollar', BLUE) + `.</p></div>
+                <br><p><strong>The rules of the game are summarized in this image:</strong></p><img src='stimulus.png' style='width: 66%;'></img>`,
 
             `<p>Over the course of the day, lots of people come to the carnival stand to play this game.
                 We will show you the results of ` + condition.num_learning + ` different rounds of the game. 
-                To familiarize you with the rules of the game and the contents of each of the three boxes, 
+                To familiarize yourself with the rules of the game and the contents of each of the three boxes, 
                 please determine which player won the dollar.</p>
             <p><strong>Please also pay attention to the contents of each box. Later on, you will be asked to determine what is inside each box.</strong></p>`
         ],
