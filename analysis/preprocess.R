@@ -29,6 +29,3 @@ D %>%
            attention_check=response_attention_check,
            comments=response_comments) %>%
     write_csv('data/exp2_processed.csv')
-
-
-

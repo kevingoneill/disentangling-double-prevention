@@ -1,0 +1,631 @@
+id,vignette,factor,cause,age,gender,attention_check,comments,rt_cause,rt_age,rt_gender,rt_attention_check,rt_comments
+00ywxuz3aup1v2edp0mgwjdc8y7dscht,base,double_preventer,0.304459691,33,Male,Yes.,Thank you for the fair pay!,20481,2452,1942,11092,27503
+0131hzzmq5sxulrqs6c2twk1yzd3t929,base,double_preventer,0,22,Male,Yes.,NA,25643,1664,3111,6008,1708
+01s7e20shv7poj9s7ees59sa7g7b99t1,adversarial,double_preventer,0.6849003,51,Female,Yes.,NA,35640,3170,1982,48987,2218
+02o062z4wf63qx05424zbyvcwgprv8t4,reversal,double_preventer,0.594339623,30,Female,Yes.,NA,21177,3182,3247,12843,1250
+03972od5gq96vfaks9vejq0q19er4bo6,base,double_preventer,0.553173242,33,Male,Yes.,NA,27985,2086,1593,7260,1226
+06tt8snh1yx4dfg5afb0ygv2z7tqbnas,reversal,productive_factor,0.741852487,41,Female,Yes.,no,19837,2078,2222,8001,4280
+09we8c35jjmlzeamabomxl26u4skcdku,adversarial,productive_factor,0.925385935,64,Female,Yes.,NA,27959,4134,2671,13372,1560
+0ghe3eugda5q0okyxc6sr9a83xgl8k3c,adversarial,double_preventer,0.063750715,24,Female,Yes.,NA,35846,2930,2462,5498,1412
+0gvhz9jbbggnw5gp2m1m8gneylybduvu,reversal,productive_factor,0.764150943,18,Male,Yes.,NA,39557,2893,1697,5213,1022
+0kbh4xem8ravezbb4e8ftydng6k0srp1,reversal,double_preventer,0.860644498,53,Male,Yes.,No,44969,2738,2170,10423,4633
+0mtft7rsewkzb4ht3yqj0g4tpgrsxepa,reversal,productive_factor,1,24,Male,Yes.,NA,26215,2232,2162,23186,2605
+0odet2spg6qhtjbq1y3w1az55q1lzsg0,adversarial,double_preventer,0.616638079,40,Female,Yes.,NA,16252,2661,2044,3664,1514
+0oe1cvc44kxc8odgcm2owextz2jwkza3,reversal,productive_factor,0.496569468,42,Female,Yes.,Nope,29845,4130,3861,4568,5882
+0p0ay96z66eooxnud82pk4gldqc6fnzm,adversarial,productive_factor,1,29,Female,Yes.,NA,34603,4451,2767,18365,2861
+0pq39zrmn5rdoqx8xqol3x2o5skha6vw,adversarial,productive_factor,0.246140652,59,Male,Yes.,NA,37956,3577,2020,5914,1620
+0uxvowvc9u6p89c82jt25tktpgwjz10z,base,double_preventer,0.0946255,45,Male,Yes.,NA,26929,2738,2397,11692,1549
+0v2ojako8yyscb2htbq1jw83pxmyuvrc,base,productive_factor,0.996397942,33,Male,Yes.,NA,32508,3017,2602,14179,1164
+0x764kre02d9jyny0lxk7rrlv6u2bn8j,reversal,double_preventer,0.481132075,30,Female,Yes.,NA,20662,1974,1783,8301,1115
+0xcuhfjocrkozhoasmae5lp4zvpjvrc1,reversal,double_preventer,0,72,Male,Yes.,NA,51577,6837,2943,11580,3698
+0zp47kzlj1dx2ey8wfn1lreuub2z4qjy,adversarial,productive_factor,0.737049743,25,Female,Yes.,NA,43447,3099,1972,7713,1536
+100mvryv0rtnudx8hb3cgf7tuo41sufq,reversal,double_preventer,0.635752427,24,Female,Yes.,NA,13047,2246,1659,7340,978
+10zwj324rtqy2sfl5ddfg9wqs3wyutcm,adversarial,productive_factor,0.820191978,24,Female,Yes.,NA,30265,2774,2782,5652,1391
+161hfuagkc00ks7cspfv57x2chzozmza,adversarial,double_preventer,1,26,Female,Yes.,NA,40364,1758,1798,11288,1014
+19c1wlq08syb8qu0la65zvnzmx6hb456,adversarial,productive_factor,1,49,Male,Yes.,"Interesting study, hope you have a good day.",140943,9489,4939,46140,85229
+1cq5sdnbw28vm7ew562mupugncmw25ov,base,double_preventer,0.754888508,23,Male,Yes.,NA,27703,2748,2053,4748,1069
+1d8ruvh7vk60j1wnpd5kuz40g8phpj0n,adversarial,double_preventer,0.25248543,37,Female,Yes.,NA,61511,3755,4109,19535,3937
+1dfstv557wwee95b7qfygv9uhod7arqg,reversal,productive_factor,0.60806175,36,Female,Yes.,NA,28732,2442,1880,7127,1317
+1e5544ofp3s4lodhe8hdooayknuo4sph,reversal,double_preventer,1,41,Male,Yes.,NA,34545,4783,2021,8082,1419
+1fobgjlkz71gcej4npf1f5h38u19br3t,reversal,productive_factor,0.976843911,29,Female,Yes.,NA,13815,3039,1829,5755,2009
+1hpkfj6ajdaap38xwwenkq6zsjr77mpf,reversal,double_preventer,0.107204117,39,Male,Yes.,NA,51435,2408,1683,5384,1161
+1j6v4yk1td1u8n8f86a90py39frgae6h,adversarial,productive_factor,0.625214408,51,Male,Yes.,No,60884,4058,1944,9365,6486
+1jatkcdtp0sdzgtll0p8r6zmy94jsdhm,reversal,double_preventer,0.655231561,43,Female,Yes.,NA,58847,3909,3845,13831,3196
+1jo1sd5l10ujnd41q8bz43xke0muaa2k,reversal,double_preventer,0.08279066,52,Male,Yes.,nothing to add,74677,5021,2475,5295,8308
+1ls3v0opsded3p532ogfdrb6pd2zxmt6,reversal,double_preventer,0.658755896,44,Female,Yes.,no,30753,3480,3237,21359,5349
+1r0bloktb6qvvkxcrvduvvzu63fdlfy2,adversarial,productive_factor,0.772727273,43,Male,Yes.,NA,28615,3672,3313,9980,1814
+1sekt7qqe9dutu7f06erlrosslvdcsbs,base,productive_factor,1,42,Female,Yes.,NA,29500,3440,1973,21376,1629
+1v8mzlxtwlngcxpmar34kc1gbkgqt3g4,base,productive_factor,1,47,Male,Yes.,no,67217,5690,5027,35259,10477
+1waanwcgq2l1sabcqt5dnyodyfsgl665,base,double_preventer,0,35,Female,Yes.,NA,12157,2347,1487,4271,2450
+1zaxwrcdp2ek1jegawunrls25zpyp2fp,adversarial,double_preventer,0.17238422,20,Male,Yes.,NA,17286,2381,1456,6812,859
+21h963rvnn1uns1vjmulbpb0n8m67xxb,base,productive_factor,0.779883148,53,Female,Yes.,"no, I thought it was pretty easily understandable. I read the scenario twice to be sure before I answered.",32820,4385,3052,15161,23940
+22orr15qus89p8t52yhngfxb9l50yqps,reversal,double_preventer,0,51,Male,Yes.,NA,40214,5987,2302,9909,1522
+24d7r6ab8fs0exfvyunne1u7m79qjqb0,reversal,double_preventer,0.047786235,38,Female,Yes.,Thank you for the survey opportunity!,60234,5772,3603,28158,17685
+28f9h37mwch4uac6d2f4xbzq0g7pxhw8,reversal,productive_factor,0.165523156,57,Female,Yes.,NA,26229,4006,1397,3247,1346
+29405teorqhcopbcmtceuhbmr2qa7g3w,base,double_preventer,0,41,Female,Yes.,NA,45797,6895,2742,16682,2520
+29eqp0kmm6qmbdq48333mu5c3cdec5lh,adversarial,double_preventer,0.078044597,26,Male,Yes.,NA,113378,5013,4873,25660,2502
+29gj0kjyl5h4yefw9ryjaobe2ryozp0z,adversarial,double_preventer,0.892795883,40,Male,Yes.,NA,24726,1983,1705,7077,2334
+2bw5jecxabtkv1np63mgf0wkrtypn6q3,base,productive_factor,0.809777015,22,Female,"No, I had trouble paying attention",NA,25211,4280,3372,22275,1545
+2h96cppg0usa1a4vtyyrvnlnzym2vpue,adversarial,double_preventer,0.479073756,32,Male,Yes.,no,25271,4527,10194,20980,3581
+2htrfjt9xrxtutj5hjc48f36m53clxsg,base,productive_factor,0.894511149,27,Male,Yes.,NA,20688,4086,2083,7391,1302
+2konm9jh07zqkcblluftenqn5912ukfy,reversal,double_preventer,0.781303602,22,Female,Yes.,NA,17420,1925,1717,11181,1083
+2lbn2g8bmfa92fg5oezh5wljvvnrucy2,adversarial,double_preventer,0.522298456,26,Female,Yes.,N/A,40333,2868,2048,7628,3328
+2mnf48lmlctn0sng6c4v77m4sscbjmz2,adversarial,double_preventer,0.513379074,40,Male,Yes.,NA,26725,4579,3024,12477,1880
+2szt4d2c429fmyqwbx76kd4gpuo9285x,adversarial,productive_factor,0.930531732,38,Male,Yes.,no,60237,5254,9037,20552,4927
+2yclczfechkhgmjrnq4smosj792o4dwa,adversarial,productive_factor,0.93464837,70,Female,Yes.,NA,68911,8429,4607,16711,9287
+2z8gqa68dtt1llruhwc23o2pbwm4k69y,base,productive_factor,0.997427101,42,Female,Yes.,NA,33061,4279,3235,19546,3554
+2zybj7nza4bx7fv4n4lgyerkdr59gvuh,adversarial,productive_factor,0.680638937,36,Female,Yes.,NA,14211,2392,1999,16964,1551
+329nuh1h38hcg7ur00gz9eltd5b7u35w,reversal,double_preventer,0.740137221,35,Male,Yes.,NA,40103,2450,1885,14067,1431
+347qox3cs6eum28ezxcx8nfkkmvdvjpe,adversarial,productive_factor,0.640651801,24,Male,Yes.,Thank you for the opportunity to take part in your survey. I want to take part in more of your surveys.,1272793,1643,1450,19336,5198
+34tp0x06125j93yo1uxcbv75zan7zp9e,reversal,double_preventer,1,28,Male,Yes.,NA,32871,3850,1815,92074,1183
+366o8bdcrdbpbgsl2eywbf6tp4c7omp3,base,double_preventer,0.104738422,28,Female,Yes.,NA,41337,3183,2048,7343,1479
+37e23lqfb9oklme6c1entmj2vj15c28h,base,double_preventer,0.02915952,23,Female,Yes.,NA,23820,2586,2080,20204,1419
+37or9txpzs1w6wffaqssecjqcp8t73f8,base,productive_factor,0.783876501,32,Male,Yes.,"I tried to put the slider to 75%, but the remaining 25% blame belongs to an unmentioned character: whoever placed the bottle close to the edge",27802,4173,2479,16573,55678
+39mov3ohky740o47fdz5tfbonksq8620,base,productive_factor,0.918524871,24,Female,Yes.,Thank you for the opportunity!,89808,10704,8111,65748,38355
+3ckk3gsxxp9r9at85kl6y2zt2w9718e0,adversarial,double_preventer,1,34,Male,Yes.,NA,30123,2421,1732,9594,847
+3hr1zc25afkk57358q7n9tapf4qfejzp,reversal,double_preventer,0.153859348,47,Male,Yes.,NA,28223,25709,2143,7897,1195
+3j98xkxcuhoded9we3ojloqltk4t3xrc,base,productive_factor,0.999798992,30,Female,Yes.,NA,19620,2724,2068,15844,1183
+3jktk5ygjtxbu9q1qloejy9kme6mapm8,reversal,double_preventer,0,19,Male,Yes.,N/A,41432,3323,1801,5429,4133
+3nt6gkmhxj4v5qwyje8y3njwxph67a6q,adversarial,double_preventer,0,33,Male,Yes.,NA,51574,2437,1539,56216,1278
+3rwb7g2fwoqz40bswm3hez29q54vbfup,base,productive_factor,1,26,Female,Yes.,NA,32558,16335,2260,13846,1172
+3sdjputp8hjo8tfb55k3ql691oae5wxx,adversarial,productive_factor,0.853344768,31,Male,Yes.,NA,29615,5699,1680,11198,1869
+3sggzwx54tdpr2pfq4txsxsvuauc1r1t,adversarial,double_preventer,0.199828473,44,Female,Yes.,NA,23745,3687,2702,24140,1956
+3snw2k4zl88v2q3h6qv2bh5n3hzbcw1v,base,productive_factor,0.987135506,20,Female,Yes.,NA,34166,17375,2747,6366,1449
+3vy16mgmoly1106nn5drbphhnmqfz11d,base,double_preventer,0.026586621,35,Female,Yes.,NA,30446,2502,2239,10084,1171
+3y160fdjftnoesweptavpjsd958umxyu,reversal,double_preventer,1,23,Female,Yes.,NA,15799,2156,1472,5245,997
+40a3v4k34d133cf6p522u5n8adlxzv4g,base,productive_factor,1,24,Female,Yes.,Thank you so much for choosing me to take part in this study! I experienced no difficulties during my time.,39830,3455,1979,19456,17920
+41xxrcqwyryn98xwppc0aykdwd3dfyeh,adversarial,productive_factor,1,29,Female,Yes.,thanks,74219,5902,4079,9586,57678
+42mwwhmlno57kjn8oxm87d5u7cujq0zj,base,double_preventer,0.230703259,26,Male,Yes.,NA,15932,2337,2406,6993,1013
+42qzh502s4v8n2un51jlg7yz4xnfvun5,base,productive_factor,1,44,Male,Yes.,NA,23631,2281,2079,18385,1584
+443lpwtng8nkq2bx7zpzbfyc2dkv5elm,adversarial,double_preventer,0.13464837,37,Female,Yes.,NA,27063,3085,1559,6158,1210
+453cogsex3rbgwvsg8hvdddeylrjakao,reversal,double_preventer,0.975145698,38,Male,Yes.,Nothing comes to mind.,22022,3719,2331,7678,7932
+4559bzwvsulbkjb5170gj6dp68zzfyj2,base,double_preventer,0.372041166,20,Male,Yes.,NA,55030,3934,1945,15898,1690
+479bz6skuddv93r4nfuc48gcnt57awd7,adversarial,productive_factor,1,52,Male,Yes.,NA,79595,4125,1879,37850,2433
+479jn72uqhnrepojqwct7wn98vz6lxop,reversal,productive_factor,1,59,Male,Yes.,No,59246,4861,2721,10196,7304
+49c6g0wk33ngmqrzy8363uv52fqlq94p,reversal,double_preventer,0.182550566,31,Male,Yes.,No comments,30457,3020,1521,6194,4498
+49vh1cxl190g8wkyjdsb3hy9de6ztt0q,adversarial,productive_factor,0.733276158,33,Other,Yes.,NA,21895,4045,2714,16207,2731
+4c4w7tjbkpmmc2om9d5ngy6aek83kyvh,reversal,double_preventer,0.853001715,35,Male,Yes.,NA,53465,2531,1725,5652,1358
+4h36zhz21cvcfpwy17k1p4khxllazhsx,base,productive_factor,0.751407054,51,Male,Yes.,NA,19355,3786,12697,5136,1344
+4kp6x0m767msvr7gybq1pwam11ad9gbr,reversal,double_preventer,0.711835334,31,Female,Yes.,NA,46474,2616,1696,18072,1518
+4lewt3vjebjnfamnyar34xuxnpq416u3,base,double_preventer,0,49,Female,Yes.,NA,25261,2486,1572,5998,1278
+4p381ex65crzyf6yo8eot3g1q0f1e08m,adversarial,productive_factor,0.484562607,37,Female,Yes.,"No, thanks.",39116,2769,1419,10039,4610
+4p5plg58me9ff4wenn1cpr6z5ur8pkf3,reversal,double_preventer,1,22,Female,Yes.,NA,32948,2285,2152,124762,1040
+4r5cuakx7qw8ogqbmpjwe7o1g2hah8ru,adversarial,double_preventer,0.59948542,34,Male,Yes.,NA,45761,3061,1555,22709,2869
+4tp2a5nf0hzapdxk9bcoos3ebbrqxsrr,base,double_preventer,0.300171527,38,Male,Yes.,NA,46462,4188,2447,11862,1163
+4trqv9psr8u24bx4znju3bhjmkr2xf3g,adversarial,productive_factor,1,57,Male,Yes.,NA,38581,5653,2173,18839,1994
+4uwfogq4308mbg8pbdt80aj3b4cvo1ov,adversarial,productive_factor,0.963121784,37,Male,Yes.,NA,17751,2926,2390,9286,1495
+4v5jurgddxpokzlg49k76yftjq3829mh,base,double_preventer,0.613207547,25,Male,Yes.,NA,26466,3563,2028,7320,1161
+4wn4ggxwf2yxt26ymdmjn7japgxabh7o,adversarial,double_preventer,0.494168096,36,Female,Yes.,NA,18719,2586,1911,3716,1374
+525a2ueb6l1vv9x9s6cx0zyc9589z3mj,base,double_preventer,0.326691145,24,Female,Yes.,NA,40530,2243,1763,17249,1454
+52gmmknvby73ubzawey8u7bfmra01gh3,base,double_preventer,0,31,Male,Yes.,NA,16798,2686,1922,19046,1121
+530v85mgr4qtq16wgjeju1ssp1aukpa1,base,double_preventer,0.794181497,20,Female,Yes.,NA,27295,3103,3397,6101,815
+53ugsdmgwhy3tg54d936srm87s3a3h2h,reversal,productive_factor,0.625900515,26,Female,Yes.,NA,19468,2646,1966,10312,1160
+54b54fmv41bwtbs3j5atpx9sdfd100ba,reversal,double_preventer,0.167924528,40,Male,Yes.,NA,57845,5928,7888,20235,2028
+55nztoyyguvz6lh72x2rn6d0uhu9abzu,reversal,double_preventer,0.930424528,23,Female,Yes.,NA,31301,2317,2190,10966,2008
+588y3a9kcm3zzw9v786fejauk577o3h3,reversal,productive_factor,1,32,Female,Yes.,NA,19977,2481,1728,6820,1052
+589j9a3h5cb6mrq902rhenejcyg5t4r9,base,productive_factor,1,41,Female,Yes.,NA,42250,4244,2581,8253,8590
+58rgrsmeer9744n88vf93cfvqzfvuuhy,reversal,productive_factor,0.322242174,47,Female,Yes.,This was thought provoking...I enjoyed thinking about it!,104263,2914,2065,21913,62470
+5bwlyz3ls1b42n5axucvm30b4tyaqrx5,adversarial,productive_factor,0.607204117,30,Other,Yes.,NA,25350,3860,2650,7533,1733
+5cta1q0vt6c1sfxx08lxe60cr51upb6t,adversarial,productive_factor,1,19,Other,Yes.,NA,39179,3246,1850,12748,1322
+5drefvufv9b5pwkzz790q7n9s822t18a,base,productive_factor,0.623030124,22,Female,Yes.,NA,27685,2013,2017,11333,1810
+5f0h2vkgtvroxtrvgvdep4vg79dghbkn,base,productive_factor,0.655794383,47,Male,Yes.,no,44817,5522,2929,7439,7539
+5fuy6yl2gj7fdyjz9htgwkjgg2qujhbu,adversarial,productive_factor,0.729631218,22,Male,Yes.,NA,22631,1491,1618,20525,1492
+5ljywldrtvzeeubu8opkm8u8mvdnq04q,reversal,double_preventer,0.166380789,34,Male,Yes.,NA,3536,3119,1865,2928,1046
+5mguq2f65t2nlhmf35zw3o426hj3bxys,adversarial,double_preventer,0.545240137,29,Female,Yes.,Thanks for the efforts!,45206,3073,1596,6890,7143
+5mwjk6u8kbnjpavbo55lohfqe37zm58q,reversal,double_preventer,0.309605489,37,Female,Yes.,NA,49477,2874,5580,6664,1475
+5nll66ns2q1xshlkt86alae00gk6ruve,base,productive_factor,0,25,Male,Yes.,NA,100284,2434,2205,22511,5182
+5nz3qydbnbcf8p9qn8s6b7r3vslq7bah,base,productive_factor,0.832761578,58,Female,Yes.,NA,40087,5501,4331,23244,2660
+5rpwcc5eqqq339608pov8tm5elasy4km,reversal,double_preventer,0.995711835,56,Female,Yes.,NA,18140,4624,2187,16815,3222
+5stohaaegabm7jvrj6zz2pnnv6pb7ozf,reversal,double_preventer,0.015151515,70,Female,Yes.,NA,29326,4698,2400,26808,2800
+5won0m969a8a2yet71lfo261a1ycf34o,base,double_preventer,0.139794168,40,Male,Yes.,NA,18924,2977,2176,6806,1416
+5xt5djhwjtv2nd2yqqxhdsrhkywyvv40,reversal,double_preventer,0.634934248,22,Male,Yes.,NA,28744,1745,1626,3732,1015
+607zd3l5wz7b9m9hr66n0bj5ezr6r1j6,base,productive_factor,0.998570612,31,Female,Yes.,NA,36166,2514,2306,9855,2495
+61nhjwdu3wa13k4rhbj8v04lh3kqtsft,adversarial,double_preventer,0.177530017,36,Male,"No, I did not take the study seriously",NA,29613,3592,5702,9727,1224
+61u60oe3sbxyyf3mbeyydow91paybj4d,reversal,double_preventer,0.939885292,24,Female,Yes.,NA,30562,2828,1708,4453,1342
+621rjvlqu6zop2ezh2wkuk137h94wwl0,base,productive_factor,0.509433962,69,Female,Yes.,no,52527,4045,2172,10114,4500
+64nlyvhtep0btdckyg5kawq72x5nugba,reversal,productive_factor,0.891080617,29,Male,Yes.,NA,27327,3103,2133,20063,1676
+687ehscuev6wb72eflypt5rx5t1qa8zc,base,productive_factor,0.825042882,31,Male,Yes.,NA,35501,2673,2387,9807,1883
+69r46k1pjjdeffpmur2d9g9n6cs0l7a9,adversarial,productive_factor,1,30,Female,Yes.,NA,28475,4404,3097,9951,1512
+6hh0rf2ncd16hrx9qggn8fxl3alk50zc,base,productive_factor,0.945969125,40,Male,Yes.,NA,40563,2889,1720,14656,1499
+6ltt3x5wm7jn9y3kffwcb3aobr6wqyrr,reversal,double_preventer,0.379941728,41,Male,Yes.,NA,31047,4808,2529,13427,1735
+6nowtyycjl0kmbkmh7cp20vz3s8r0v9w,adversarial,productive_factor,0.767275842,54,Male,Yes.,no,55183,5275,2164,20098,10032
+6oycz4rarfh7qe3531w9kkgbzx67gf58,adversarial,double_preventer,1,38,Male,Yes.,NA,39235,3015,1597,14673,1684
+6rk63b0xfyq9b6l1mxbvm8wrp2speu9o,reversal,productive_factor,1,32,Female,Yes.,No comments.,5010,4634,1987,5143,6574
+6st52yl7505vsr2dyhlxols7j7zwqysf,reversal,productive_factor,1,36,Female,Yes.,NA,37154,2952,6178,10513,10964
+6wb2x9ua00y5w22vgh6pr53fhup0yy3b,adversarial,double_preventer,0.689536878,27,Male,Yes.,NA,12499,4057,2700,18966,3162
+6y4qbkxk233mod2eagf3d9qmhunq1k5q,base,productive_factor,1,35,Male,Yes.,NA,30270,7479,1894,16051,2083
+6zvovlr3gncp6ucg2omwayx6jrvb1v4n,base,productive_factor,1,29,Male,Yes.,NA,21238,5333,25736,98021,1147
+70kvtdc9fze086k3gqdkj1jju3pb9w48,reversal,double_preventer,0.983704974,63,Female,Yes.,NA,27999,4234,2713,17771,2594
+734097u007lgypq59fmzlxnxfcd3hety,reversal,double_preventer,0.902229846,47,Male,Yes.,NA,16140,2654,1544,7086,2079
+74qzl68e824hmwmvjq44hwb2th0lrusc,base,double_preventer,0.200101287,39,Male,Yes.,NA,33637,3998,1798,24597,1884
+77cg5c6yom86kpv8kyqxfw9cyg6j0dfz,adversarial,double_preventer,0.112349914,39,Female,Yes.,none,36762,3039,2350,7797,4177
+77ezry7z4se1tve6au2odpngpt25qo3g,adversarial,productive_factor,0.991913747,35,Male,Yes.,No,57678,3485,2698,14647,2570
+795d7j8f7qzmjdz6jqn5b976y4kreqxj,reversal,productive_factor,0.36380789,28,Female,Yes.,NA,25973,2475,2166,9477,1066
+7b08go8uwm7ryg4ue5gkj8w7nx05b0dy,reversal,productive_factor,0.763007433,23,Female,Yes.,n/a,36205,2220,2669,11002,4510
+7cvdppa1qxa30864kcd2h60xfywhz3yl,reversal,double_preventer,0.60806175,26,Female,Yes.,NA,19175,3014,1287,11550,852
+7ea1bol6pavhoxrahzu5q0kn7u53nmqy,reversal,double_preventer,1,46,Male,Yes.,"I just realized that either could have been at fault for the bottle falling, but I still choose my original answer.",52869,6278,2597,12904,94513
+7flvua4vgwln88w3ubknbhxzu8udfgcp,adversarial,double_preventer,0.489708405,66,Female,Yes.,NA,44144,6640,3025,19831,19573
+7gc64usg1vemml34ma0c2cqd2qcaq7z6,adversarial,double_preventer,0.661663808,49,Female,Yes.,NA,56756,5481,2845,11835,1934
+7jlj2vszsm3yqrbphy0pxqa5u3r3gf7f,adversarial,productive_factor,0.661342196,23,Female,Yes.,no,26746,2026,1717,13609,3186
+7l1axdem92f0ff371cz618yup4u5tp8v,adversarial,productive_factor,1,20,Male,Yes.,NA,22649,5785,2224,12207,1525
+7qo180bu8b0jntlav37gxk792lgo5r8l,base,double_preventer,0,45,Female,Yes.,NA,28536,2587,1749,10561,1680
+7qorf6alx6dsd1mxfznkyx5a580x06o7,adversarial,productive_factor,1,37,Male,Yes.,NA,18224,2180,1794,8371,1344
+7tohnmuuphonfzcmyosnon669c1htjvn,adversarial,double_preventer,0.682161235,43,Female,Yes.,NA,37768,4918,3158,9464,2026
+7vt5z2bamb541x38by1oaxxj9xhrdsqf,reversal,productive_factor,1,50,Male,Yes.,NA,61942,4735,1891,22495,3108
+8101pqvgrbpc44kuqexuzqdevrzbsnk8,adversarial,productive_factor,0.974606025,22,Female,Yes.,NA,28108,2249,1871,9041,1144
+82btzmvv6wk30ym90x4znqkgbomp8j0t,adversarial,productive_factor,1,20,Male,Yes.,NA,24015,2686,2042,6534,1213
+836yss36pwysvhrkjyf1um33302ckmrh,base,double_preventer,0.490926146,52,Female,Yes.,NA,32793,2481,2419,9352,1637
+85tr6h4oh1yncqjlh7jncedvwxenet0l,reversal,productive_factor,1,33,Male,Yes.,N/A,29173,5910,1924,15153,6180
+87ym4f6p0gfqyndbtoxdpl6ltc2jvcw8,base,productive_factor,0.7864494,24,Female,Yes.,NA,38643,3500,2568,30082,1704
+899lkr5zaqcj5kgq650oqzkhaokazyjz,adversarial,productive_factor,1,36,Male,Yes.,Thanks for the opportunity to contribute to the study!,47005,3093,1958,32721,14491
+8a8k5h30whgtw3yhgtqoy57smw5d9288,reversal,double_preventer,0.894511149,20,Other,Yes.,NA,24813,5666,2262,33954,1519
+8b0swvx4go5573osq85260dn4td8wfmo,reversal,productive_factor,0.904459691,40,Male,Yes.,NA,32542,5283,2383,27435,1528
+8db83r6pe2la6mw6na3kake48224lzc7,reversal,productive_factor,0.714408233,32,Male,Yes.,None,23035,3921,1857,15010,8703
+8dnwz10m12je0mc5538whdzd98uj44n7,reversal,double_preventer,0.565135413,51,Female,Yes.,NA,43291,4505,2218,13814,1773
+8fdxxh7mtgr1k95y94p5o9j1enphwo05,base,double_preventer,0.775014294,27,Female,Yes.,no thank you,21976,2221,1599,8399,6312
+8lh710ajrpd7d8de1gtvu45faumtsxsv,base,double_preventer,0.484562607,47,Male,Yes.,NA,55789,3508,2308,9029,1544
+8lphbpyts2shjdd1gj32fpvpwqqx4d3j,adversarial,productive_factor,0.789879931,30,Female,Yes.,NA,133296,2382,1933,6916,1141
+8otqz5pgsyojfl6z5co2svku9ktxhp9z,adversarial,double_preventer,0.671526587,35,Female,Yes.,NA,21960,2367,1440,6741,1052
+8r8rs8mpfd8kbvgn82hu7h9tyrakhhks,base,productive_factor,0.599417209,24,Male,Yes.,NA,43179,2312,1859,14573,1416
+8whm3agz0awcso1c9gd4g3y43e9a0vsw,reversal,double_preventer,0.772727273,57,Male,Yes.,NA,28910,3272,2570,16890,3337
+8xt0st46ck4bu865hjq1enqkaml0p2nm,base,productive_factor,1,47,Female,Yes.,no,21600,5465,2431,12944,3805
+90xczl4lcduobr8tprugduf915pfeut0,adversarial,double_preventer,0.745979846,31,Male,Yes.,NA,17031,2064,1753,9525,1081
+91f1pdlbx6szjcgxrcn463hb9jadp3au,base,double_preventer,0.174059284,38,Male,Yes.,NA,29436,3727,2322,9129,2112
+91xevrbr336m0gd4m2xkhqq7vex4f455,reversal,productive_factor,0.698113208,34,Male,Yes.,NA,31947,4057,1808,13490,1672
+971lnp3ftt6qkukbffltgbob9mexovly,adversarial,double_preventer,0.023156089,72,Female,Yes.,Thank you,29092,4599,2764,14076,5938
+9a40mv54vqs0q396n3udv3ydo6f39fom,base,productive_factor,1,34,Male,Yes.,NA,43614,3211,2313,13499,2020
+9f5mk3axc52202pz7x5mln06nnuacfhw,adversarial,double_preventer,0.321912521,25,Female,Yes.,NA,74024,5694,2837,11400,2913
+9kt09j85ecplz0nwon5sw43aeof5r1cw,adversarial,double_preventer,0,21,Male,Yes.,NA,50110,120209,1538,8427,1470
+9ob49opbfcr4ht8o1pbxknltnvxjxcbz,base,double_preventer,0.685248714,66,Male,Yes.,NA,61769,4494,12206,19406,2255
+9odoty3kr0a6f4l801u3ajsa7lxf8cp8,reversal,double_preventer,0.302744425,22,Male,Yes.,no comments at this time,22064,2293,2069,8198,9587
+9qox0orjb6t1x4xjl8qv70994b7l6u07,adversarial,productive_factor,0.995711835,21,Male,Yes.,NA,26114,2418,2178,9083,1762
+9qqwxersg9m6n765ozdo9dda8hj3q9zv,adversarial,double_preventer,0,63,Female,Yes.,no,23389,3077,2695,11348,4210
+9tshz4tarcop171quwgvrsccn1nb7uz8,base,productive_factor,0.794355703,34,Female,Yes.,NA,36430,3391,2271,14546,1629
+9vzl3fra7n3w8hxfx453gumtsl66o6or,base,productive_factor,1,58,Female,Yes.,NA,30729,3748,2206,19527,1540
+9w31yy14gpmcxkzbybw7abmqnamg64fd,adversarial,productive_factor,0.493592242,61,Female,Yes.,I felt that the bottle would not have spilled had the other guy not purposely knocked into him. He may have been able to prevent the spill.,66105,4163,2725,10239,52675
+9xqg7y7m6j2k6hnuwh6d4bhtqvs7j52m,base,double_preventer,0.687379395,35,Female,Yes.,NA,24735,2798,2191,6691,1417
+a2k7hwyud8xarpu4v1kg0de83l7ton2b,reversal,double_preventer,0.295642153,31,Female,Yes.,NA,22918,2894,2847,6309,1482
+a3er03xajtru93ocbz71ej6q72s4qt3j,base,double_preventer,0.779588336,22,Female,Yes.,no,34728,2633,2069,7986,3968
+a5u90td2abky96x7d5nxtglzbfco2q4v,reversal,double_preventer,0.767367067,47,Male,Yes.,NA,32615,3845,1681,9027,1311
+a6pt9x1a305n0rl5d88xmy15smx3berz,reversal,productive_factor,1,28,Male,Yes.,Nothing at all :),15858,2548,2060,12365,5064
+a7p1we0jsfs0oarnuhwnztz298l9t6ax,adversarial,productive_factor,0.794168096,25,Female,Yes.,NA,34046,2688,1687,5730,1030
+aa2cj40se17hyslrjj7g4atl0go2okkp,reversal,double_preventer,0.784734134,37,Male,Yes.,No,39121,2628,2587,15067,6793
+aas0z9lxml2yq6vf0q0fa1pc55ca0n4b,reversal,double_preventer,0.686277873,29,Male,Yes.,NA,52380,11465,2204,9512,1490
+ac634u6ud9emvo9xp9jt7yhrzsjh7gd1,adversarial,double_preventer,0.784399121,27,Male,Yes.,None,106549,3706,5177,6487,3384
+amevlazhokxz33yo6roa9zd1parfkxv0,reversal,productive_factor,0.235849057,38,Female,Yes.,No.,35979,3492,2492,8672,7004
+anh6guxhyosmw4xn8bajjc1n5jnwsnv8,reversal,double_preventer,0.671526587,33,Female,Yes.,"Peter didn't cause the bottle to fall, but his intervention prevented the bottle from being caught, so the spill is at least 30% his fault.",22598,2239,1606,8584,38766
+anvabysjblu7gsvbbo9blcdls43tqegu,base,productive_factor,0.711079801,53,Male,Yes.,NA,65178,8755,2516,10635,2100
+ap0088upmnnbsdtzu0zgtlen00vg4q5o,adversarial,double_preventer,0.862778731,27,Male,Yes.,NA,50435,2493,1690,13486,1240
+as8yrqtmoy4h83f6ky2pkmgeke2pyr3q,reversal,productive_factor,1,21,Male,Yes.,I have no comments.,49512,4313,2224,12718,10223
+at7d4ktl12u2rhuumbcrox6jr379wpst,adversarial,productive_factor,1,23,Male,Yes.,no,35774,3011,2097,18391,7944
+auz7hkw8qurqy9k8pln2no0k4qvh0kx2,reversal,double_preventer,0.898629355,28,Male,Yes.,NA,40131,3411,2432,3514,1249
+avjo46s32yl0pcml2qryfyz69eh0vn1s,reversal,double_preventer,0.990566038,43,Male,Yes.,no,22569,3992,4476,18647,5390
+ax38hfmldnrv8ysf9ydg9vffoemmojzo,adversarial,productive_factor,0.311320755,32,Male,Yes.,NA,42198,2197,1816,5934,1843
+aznrcaoz629crnd7vnet0peqwqcmyxoo,base,productive_factor,0.999142367,30,Other,Yes.,NA,36707,9456,4301,13834,1845
+b24m3umg3mtz7yp0t559e4e6huk0krhw,base,double_preventer,0.672898799,29,Female,Yes.,NA,38129,2680,1586,5369,1157
+b5mtzpdq5kffr4lt7aecpk6j29jwlkzh,adversarial,productive_factor,0.616638079,23,Male,Yes.,NA,4171,1615,2212,33100,1367
+b675khp3bahjjtfyo56mxcl6cu0y1e7s,adversarial,double_preventer,0.285591767,40,Male,Yes.,None.,44317,2798,2042,5398,3898
+bc9eqofqbj2lfeo6ru4cmw377ywov7v3,reversal,productive_factor,0.769296741,58,Male,Yes.,Nothing,284203,8995,2572,28412,10299
+be4ty32kcbnzlvx4xpw6455x5hcb92pp,base,productive_factor,0.754888508,38,Male,Yes.,NA,50272,3176,2037,17378,2304
+bfvbe8nuk5css0m2gck3rkqewvlhlrmp,adversarial,double_preventer,0.252704415,42,Male,Yes.,NA,31070,1724,1655,8893,1900
+bhnznukcrrfaava0qxuhvwq2gj5gb4vw,adversarial,double_preventer,0.287650086,36,Male,Yes.,NA,18339,2329,1548,4533,1206
+bk13596tf03lk4rvkrqctg0vtn8txs64,base,double_preventer,0.15728988,37,Female,Yes.,NA,12542,2053,1759,9060,1266
+bo322w82mm42ukcw95ok8zc78xydv800,reversal,productive_factor,0.510720412,37,Male,Yes.,NA,29463,6501,2490,5245,1351
+bqqhlfe5gzcfclmw1nf4oae4cvnqn8sb,reversal,productive_factor,0.982675815,46,Female,Yes.,No,72058,5319,2298,11256,4551
+bujbkg7n3c7ewth4jzaordtp87h04jqk,adversarial,productive_factor,0.122641509,36,Male,Yes.,Hard to say it was the cause since the bottle hitting the ground wouldn't have likely happened without that third party interfering.,32273,5669,1510,7246,99118
+bva7mhk38kvo99wh5oe6adyalw8qhou2,base,double_preventer,0.19296741,63,Male,Yes.,NA,78468,6184,3668,8392,2722
+bxoc4kg1r7uvhacfn2ntvfgj0nyc762f,base,productive_factor,0.688679245,35,Male,Yes.,no,40241,2621,2587,13918,3316
+bzrnveyb5tfk2qhf8sm8mkbhbf277bce,base,double_preventer,0.127297231,53,Male,Yes.,NA,40359,3807,3122,10727,2080
+c58mgpxtstsajsz9asdepu3o6h8sfhwx,reversal,productive_factor,0.848885077,43,Female,Yes.,NA,38990,6261,2309,9527,1892
+c644ptgqs26kjmyb60afd1dw8m3bflkl,base,double_preventer,0.7864494,28,Female,Yes.,Thank you for the study!,68260,3332,2583,30973,13562
+c6luafagqvxql055g2rhmxo6d4oxyxkb,adversarial,productive_factor,0.951114923,61,Male,Yes.,No,75162,4079,3099,34764,7214
+c9oh0ene5908lha0cla1abs5ytt78age,reversal,double_preventer,0.14295669,29,Female,Yes.,NA,7701,3594,2110,6073,3222
+casvd08scod9qqwf6aromomyypu3gw41,adversarial,productive_factor,0,20,Female,Yes.,NA,24175,2367,2209,11217,1485
+cb7x5vtz3d4d4n4qg24z1o5vmuc4t0a0,adversarial,double_preventer,0.992281304,22,Female,Yes.,NA,21515,2507,1717,23229,1413
+cewov7yy12sxo0mp8g5zu301d3vaszhy,reversal,double_preventer,0.839622642,36,Female,Yes.,NA,25549,5172,4328,12197,32645
+ckw6evcxxmhp2bykdeplzmtg7ptlxkeo,adversarial,productive_factor,0.82474807,43,Female,Yes.,none,31211,2639,2155,10985,3919
+clvo9cx1q4ylnh7kud8twd2enco5f0s1,base,double_preventer,0,65,Female,Yes.,no thanks,52652,4544,3550,15459,7265
+cqeyrdfrlnubn9lod9wppj0v3ph5dztb,base,productive_factor,0.769189537,29,Female,Yes.,NA,21382,2957,2909,9729,6330
+cv28bk49qlx0godd6zqxnnxjh3rew6no,reversal,double_preventer,0.206689537,50,Male,Yes.,None,48535,3594,2680,21146,5174
+cw3wftslbrhedk1dthe7384d08dxtab7,reversal,double_preventer,1,36,Other,Yes.,NA,25293,3580,2798,6879,1346
+cwe9cfps0r063v87mytqc0ov7nfyo6ok,reversal,productive_factor,0.704116638,20,Female,Yes.,NA,74613,5108,7475,29183,2337
+d2fgpzfqfn2pegytm9tk43y3nybvu5dw,base,productive_factor,0.988850772,50,Male,Yes.,NA,70766,4008,4265,223713,1863
+d3dep8lruq6yugc0zz5su73eqwrss9hh,adversarial,productive_factor,1,26,Other,Yes.,NA,17948,3828,5039,5039,1181
+d42x6tl2jxjj8y779dxobaxqnb5nk2os,base,double_preventer,0.732933105,27,Female,Yes.,NA,51152,5236,3604,41116,4521
+d4tuv8jf9hbwkoqb21kebo21cajh2fv4,base,double_preventer,0.644082333,31,Female,Yes.,NA,170378,3474,1790,7575,1615
+d5qu9mzxbuv3n8092jtu9mt5ld8ttmz7,reversal,double_preventer,0,24,Male,Yes.,NA,28527,4845,2660,7835,1620
+d6w6lhl0438alow41qofvvn6sbn54f8d,base,productive_factor,0.91509434,67,Female,Yes.,no comments - thank you.,70594,5522,3669,17169,12626
+d9b0lncwbr7zohuyugzgpcv8ptxm5hk8,base,double_preventer,0.100343053,55,Female,Yes.,NA,62865,6266,1806,10643,2247
+d9lkkex9nssg88cnxrbozouevpxvgt1r,base,productive_factor,0.497427101,45,Male,Yes.,NA,17024,2651,1934,9338,1881
+d9xs7f7eluk509pen85ux9kh0vpv934r,base,double_preventer,0.908313679,65,Female,Yes.,NA,37950,3407,2841,12064,2101
+dcnjzn7p78l14y6fluu4zdj9o52d8ozc,base,productive_factor,1,56,Male,Yes.,Thank you,72063,3954,2598,22997,9932
+dd1krjmrn64qxddou9aeywa23maf0nap,base,double_preventer,0.478559177,31,Male,Yes.,Its not a binary of blame,22179,2341,2406,14229,9894
+dol00k8eobuadvs82ly1jqvnwd1rl11u,base,productive_factor,1,52,Male,Yes.,"This link gave me a ""Not Secure"" message in the corner of my browser. I'm using Chrome on MacOS.",41436,3846,2533,20897,100488
+dowdka031rhbg97zhm5wje3upeg86rtw,base,productive_factor,1,24,Female,Yes.,NA,118461,2274,1570,3707,1226
+dpussmovb23e1k9xx4zm6nop71ef97m1,base,double_preventer,0,40,Male,Yes.,NA,34215,3791,1555,7506,1655
+dt40e64c1bq1tds3vhyl5dal4k1zere1,adversarial,double_preventer,1,38,Female,Yes.,"Now that I have time to think about it, Mike caused the bottle to spill. Interesting study!",42875,4744,8460,15162,16236
+dup5we1hndm5opl2vepoj8q8hmwd02uq,adversarial,double_preventer,1,26,Other,Yes.,NA,57873,3341,3192,14873,2295
+dwr0cwb24tet9lc4wu4wgg0fmqv4z7qq,reversal,productive_factor,0.215265866,30,Male,Yes.,NA,40223,3224,1911,21132,1557
+dxarfokbc5mo8js96uqqhj0djv9xghhn,base,productive_factor,0.894511149,33,Female,Yes.,NA,22360,1732,2482,10956,2028
+dyuym6089p7e4u95vdp26mmzf35yr38p,base,double_preventer,0.311320755,22,Female,Yes.,NA,17747,2485,1883,5883,4213
+e0cy58c7ksdp2sxc4hsxwdrn2cg6zmm8,adversarial,double_preventer,1,32,Male,Yes.,NA,33475,3880,2422,8753,1568
+e0rvwpnj460vu9l5k10p6vz0sf783stz,reversal,double_preventer,0.879073756,26,Other,Yes.,No :),293732,3218,2376,14748,59852
+e0yyh3xlt9hlk0k9xf7m3h7kj0ho8pbl,reversal,productive_factor,1,26,Male,Yes.,NA,20149,2198,1635,6806,1290
+e20mqh2jnfuf3jr510wh1d6ynqxe32tq,reversal,productive_factor,0.995711835,40,Male,Yes.,n/a,21665,3036,1869,15354,3206
+e50nsxrjes4r3eh5p2mk0vsv6mjz3rfv,adversarial,double_preventer,0.858490566,19,Male,Yes.,NA,30814,2374,1769,4813,1190
+e676dwqqx59nqsr64hbqngdb2kcc8rmk,adversarial,productive_factor,0.949399657,38,Male,Yes.,NA,18388,4860,2485,24930,1439
+e820m3xf8cbo0cme9o3bvejhnjkt549l,base,double_preventer,0,34,Male,Yes.,NA,36577,2976,2092,10325,1895
+e8l97tpq4n2aov7ouff1xfbtwoxxaclq,base,productive_factor,0.26329331,37,Female,Yes.,NA,41042,3429,2448,12213,1738
+eb2t9e4xa9990kteyz8sz9ww9n9hnvyb,adversarial,double_preventer,0.879931389,20,Female,Yes.,NA,34700,2932,2268,19271,1695
+eczr7jfj1j9m0kchqytylyu5shb2ofbc,base,productive_factor,0.905660377,24,Male,Yes.,NA,34451,2176,1616,11831,1812
+efupgbg1ssycc1jlldvd26p7ro2jdehn,reversal,double_preventer,1,27,Female,Yes.,NA,36068,3094,2348,21410,1733
+eh51dukkczhnm3roh857or16dsmwpd5a,reversal,productive_factor,0.785877644,26,Female,Yes.,Everything was great!,23831,2605,1844,15637,7300
+ejwb47t2amfau7l9jga5ru3bwxysegbj,adversarial,double_preventer,0.728816467,67,Female,Yes.,NA,28564,3665,2530,10550,1682
+eq5y30u1pebquqv164neapb162wj28hu,base,double_preventer,0.306174957,32,Male,Yes.,NA,55313,9583,2592,5047,1671
+eqdhpv8rhs3zuf2rv78jllr5fbxf0dg7,adversarial,productive_factor,0.76156482,31,Male,Yes.,NA,52229,2570,2446,8898,1713
+es1we8h80j88npr5gkgoco62sjr3h9wq,reversal,productive_factor,0.57265759,21,Female,Yes.,NA,10864,2415,1500,4362,1061
+esxb9fcu9od4qqanwawuhx1b1temltpl,base,double_preventer,0,30,Male,Yes.,no,29213,2406,1285,3963,3806
+ew6t43fmuxfge811t8oo893hj06okd6c,reversal,productive_factor,0.712692967,29,Male,Yes.,NA,31321,5135,1843,10818,1359
+ewl0j5wdllao0sqzcuanp2rg4lte2sbw,base,productive_factor,0.652658662,33,Male,Yes.,NA,21167,2027,1301,3827,947
+ewmw0cydx9pjr9asg3m6bz0kzk0ce9yw,base,double_preventer,0.076329331,69,Female,Yes.,NA,27680,4180,2925,17234,2797
+ey1zk8r74ubea5xzqkuzsvqrwpq51ur9,adversarial,productive_factor,0.815608919,36,Female,Yes.,NA,95674,3103,4978,10993,1474
+eznlqe8mq3mzhshzvjsc2x24phxky8q5,reversal,double_preventer,0.000857633,53,Female,Yes.,no,27403,4060,2461,12059,6531
+f0mz457wav1zgp5zs5q52dnfdjuxchk1,base,productive_factor,0.796880357,59,Male,Yes.,none,22199,3428,2676,7503,5051
+f3ercu197qlu82ktud8qm1gbunljnqqp,reversal,double_preventer,0.709262436,42,Female,Yes.,No comments at the current time.,34403,2877,1701,10905,3532
+f5dp3lb8ynymmsthwmxgpdzzy1x61xdp,reversal,productive_factor,0.606346484,48,Male,Yes.,NA,23413,3645,3253,8384,1753
+f62w13k45rdskg1wwfx599jk9syqyhqj,base,productive_factor,1,30,Male,Yes.,NA,17613,1908,1512,3994,894
+f6e09wqvkkl0kun59vogvtab32qlpp9e,reversal,double_preventer,1,19,Male,Yes.,NA,30181,4105,2362,12368,1247
+fbayzj8jckpom8vjerlw8671mbu9ltut,adversarial,double_preventer,0.755574614,49,Female,Yes.,NA,26558,2846,1764,4251,1681
+ffv01bzw1z4d98r8vogpr0d71bf6qybg,base,double_preventer,0.597770154,31,Male,Yes.,NA,12990,2274,2959,10519,9367
+fgwwo4yn7ekqua1vxd8tjxqpmkd12ns2,adversarial,double_preventer,0.291957011,42,Male,Yes.,NA,29390,3091,3306,10126,1907
+flu4qtyoqgc9or57gv8owlb7rq027q88,reversal,double_preventer,1,37,Male,Yes.,NA,17998,2784,1756,6615,1367
+fnbp4ha6tw8fuujumxxhlo93vcaogncp,adversarial,productive_factor,1,32,Male,Yes.,NA,44783,5213,1815,13757,1939
+fnneqx53qyajluzhdk8bf375phgha9aa,adversarial,double_preventer,0.826686678,33,Female,Yes.,"Everything went well and was easy to take. However, the slider bar gave me issues. It showed me where I had selected when I clicked on it with my mouse but my marker kept disappearing. Hopefully my position on the bar was still there.",136370,1990,3103,12303,47762
+fnrdwno5ukbhxtuq2goptj14shfl9heu,base,double_preventer,0.002572899,36,Male,Yes.,NA,42912,7229,5802,16566,5866
+fo5rdeygmbz86gw28gzf7rejnlkgavqt,base,double_preventer,0.215265866,32,Male,Yes.,NA,30908,3017,1965,16117,1176
+foabjwn9ehk632w8ulljhfq2bn0x0xge,adversarial,double_preventer,0.649694135,35,Male,Yes.,NA,27667,3223,1983,9059,1485
+fp67tgug3vjnhkmcjdabxtzk2twuysox,base,double_preventer,0,48,Female,Yes.,nothing more,37344,2379,1661,11302,6890
+fqj5mbncj2v8daysnz8rvgx2hox5gnsh,base,double_preventer,0.854202401,43,Male,Yes.,NA,39527,4877,3272,12383,2599
+fu4ppdvrx9v7xls9zuafd6r54dks9w14,adversarial,productive_factor,0.832841981,21,Female,Yes.,NA,31160,6415,2778,27987,2523
+fxw3u78cuv2dscqe4541up75vxqx04oj,base,double_preventer,0.662950257,44,Male,Yes.,NA,59306,2968,3056,12307,2701
+fzyopagd2470ju3vy2xjy6dey98tmqv2,reversal,double_preventer,0.524013722,50,Female,Yes.,NA,36590,4526,3543,7541,1689
+g1w3hcpu06l5qvjfn1v0gwnlp9hjcl5d,base,double_preventer,0.813893654,45,Male,Yes.,NA,35945,3171,2412,18726,1827
+g4clqfce035p1ed1o5fg08b8vmkor745,reversal,productive_factor,0.000285878,52,Female,Yes.,NA,36978,3899,4340,12174,3243
+g5fyov09lmspjuz7msnfdt5sumrovu0w,base,double_preventer,0.198113208,19,Female,Yes.,NA,64313,2818,1936,35171,1426
+g6l10rvn7g8v5pbq0x8s7g4jqybuqur7,base,productive_factor,0.483838979,26,Female,Yes.,NA,16589,3794,2312,9754,11366
+g8j10d2xn58wh1fqcpydd7q5hlorb23b,reversal,double_preventer,0.838765009,35,Male,Yes.,no,21361,1862,2143,9206,3234
+gb3ngkcgssfltt8rcfawf9fg2efg61vu,adversarial,productive_factor,0.989536878,42,Male,Yes.,NA,24134,2695,1406,13814,1570
+gfag8h6y1v1hjr4tl8fchh50lnhkv10q,adversarial,productive_factor,1,61,Female,Yes.,Thank you,49625,3323,2195,13279,6028
+gfsj4td2vga92mv4k11ofhl8l925ycuc,adversarial,double_preventer,0.65780446,41,Male,Yes.,n/a,32791,3142,2128,20398,8324
+gg1oj1n0zxek7zhdl0ncm5g930fqhr2b,adversarial,double_preventer,0,68,Female,Yes.,NA,59230,6046,2683,19646,3219
+ggf7rft8043jj3h24sn5dpsse0tvb12c,reversal,double_preventer,1,28,Male,Yes.,NA,26226,2059,1445,5249,1517
+gh8jr4nj1om5jydjh5f146zz62yb0t4v,adversarial,double_preventer,0.287021155,23,Female,Yes.,NA,26417,3072,3656,8936,1680
+ghsjsbkhx9gaz7ej22nab82mflbcjqo9,adversarial,productive_factor,1,20,Male,Yes.,The instructions were clear and understandable.,64737,3678,2392,25702,15578
+gk7zh3nvhaq2nb1fherjw0czyo6qd7b7,reversal,double_preventer,0.214408233,67,Male,Yes.,thanks,48493,2952,2634,16026,6105
+glaevtwygxay8p0xgckz2medv4xznb1u,base,productive_factor,0.739565466,36,Male,Yes.,No comments,40698,3442,2361,24145,8848
+glol2kgc2sxetpx02x2f4q09bn6g7j7r,base,productive_factor,1,39,Male,Yes.,NA,44053,3619,2014,13148,1397
+go3jnvz3ys0c8usw4bbwlrtjzg2oa5a1,reversal,productive_factor,0.967581475,42,Female,Yes.,no,32061,3596,1737,9057,7211
+gqs4pnzqt457rsfxh6l29njh5zyomasb,adversarial,double_preventer,1,55,Female,Yes.,NA,23687,3010,2716,8498,2047
+gqzzz5syrxgkwwla3n2nw7r1kd4bv0rl,adversarial,productive_factor,0.995711835,51,Male,Yes.,no,26789,3728,2226,7482,7891
+gt8m1de6rxr6f2p0225rejz4247w2fze,adversarial,productive_factor,1,20,Other,Yes.,NA,39178,3679,2047,32310,1638
+gtjnl0jvcevpmz0d6474nd9r587jxvma,base,double_preventer,0.759005146,32,Male,Yes.,NA,15100,6582,2149,5254,1514
+gv5fbxdkt0qgvh1nqogxdaowe1jyw2hl,reversal,productive_factor,0.568369425,26,Male,Yes.,NA,19755,2873,2283,9799,1746
+gz98a93jq6n651rwzefkmt80k071hjym,reversal,productive_factor,1,26,Male,Yes.,NA,78402,3362,2014,12859,1523
+h043akccc4nw87ojt6kugdw4bdno7yk8,reversal,productive_factor,0.803602058,33,Female,Yes.,NA,31768,3306,2616,7073,2434
+h286zt1ek0vgfk9t406ldy04kx7a5u57,adversarial,productive_factor,0.831046312,24,Other,Yes.,NA,33636,3826,1960,21440,2532
+h30sjbpd5fc2hppbamdwqjgufreoo012,adversarial,double_preventer,0,22,Female,Yes.,NA,33513,2779,1849,7036,1277
+h41huszdxt6xdhwcx9vbzw0lz88sdt1x,base,double_preventer,0.235849057,36,Female,Yes.,NA,53583,3376,2670,29691,2171
+h6a46ymkzzg9em1owpfuv1xzb0nxh91d,adversarial,productive_factor,1,43,Male,Yes.,NA,68292,3498,1727,7830,11204
+h6lgj0nxg0r1c1bxrdj0ncwmac0hephm,adversarial,double_preventer,0.648370497,33,Female,Yes.,NA,384167,2389,2188,13763,1736
+h7ntgul5t01oqc8nkl6yl014au4y0kxk,base,productive_factor,0.788164666,54,Male,Yes.,It was hard to follow all of the events without a diagram.,59257,4329,3533,22241,78982
+hb5gptdjqc7948tn5kkl3fc0d8y144qg,base,productive_factor,0.997427101,22,Female,Yes.,NA,24233,2345,1978,22157,4362
+hh87tz0zkzkffulhljffurwthkw6v4dc,base,double_preventer,0.800171527,39,Other,Yes.,NA,30134,7705,2638,25680,2010
+hhfp6m085jvn2fhfhhbtbnfmp7heuf8c,adversarial,double_preventer,0.666380789,33,Female,Yes.,NA,24333,3251,2252,7268,1447
+hlzpfdvd7dhr3fpcclld2loou28w69vl,reversal,productive_factor,0.976401694,31,Female,Yes.,NA,40838,4021,2755,14856,1789
+hnh1b8ctp6928yldnb5zgldgdadp75do,reversal,double_preventer,0.687650086,20,Male,Yes.,NA,24216,2472,1760,8986,2639
+hnte4z6jppmz7jzbyt9fyr8az34l2qem,adversarial,double_preventer,0.318181818,27,Male,Yes.,NA,38354,2782,1750,11803,2404
+hokcu9g0trmv76xd2npofmqh7mezgy28,adversarial,productive_factor,1,25,Male,Yes.,NA,29019,2839,2148,18817,1327
+hooyqmcydpu3j9x2tq6my6k2nfsye6d4,base,double_preventer,0.833905089,22,Female,Yes.,NA,15355,2760,2138,9596,1398
+hpe1pdvlglqup95u1awnsukofts87b11,base,productive_factor,1,42,Female,Yes.,NA,27246,3349,2143,15661,1835
+hqqpv1jacc4tb189f6y5d7mjc63h7b37,adversarial,productive_factor,0.022813036,68,Female,Yes.,None,114708,5236,3277,23196,6496
+hr1nvx50pbddex7qkcrew6jnrm2z25pa,base,productive_factor,0.625471375,38,Male,Yes.,NA,29607,3086,2383,9280,2098
+j09gl24q645p03j9o978mu9wyalmw9xf,base,productive_factor,0.779588336,29,Male,Yes.,NA,46754,2106,1265,4411,802
+j25ez3srspz8nw9fxjbo4rd1vvkgd2wy,base,productive_factor,1,35,Male,Yes.,NA,25175,2048,1785,6650,1351
+j33oy6d9zg9w3l9t2o84fgt7q2c8t32w,adversarial,productive_factor,1,26,Female,Yes.,NA,103891,3767,3684,3871,1718
+j3koq9pvanluljs91goz3hd9sqlrc9to,adversarial,productive_factor,0.97683051,26,Female,Yes.,NA,34362,2578,2133,11909,1471
+j6w986j55mkx06e9detsmzs4zxs3co9t,adversarial,double_preventer,0.120926244,59,Female,Yes.,NA,61183,3387,3287,16604,2500
+j8u2z8a9fn6bxb2k3f5uwzxp2g4byzu2,reversal,productive_factor,0,41,Male,Yes.,NA,24954,2922,1825,10479,916
+j93ovlwx7zs1tmtmq647osujzwjrvkor,reversal,productive_factor,0.606346484,28,Female,Yes.,NA,22060,2777,2255,14759,1416
+jahxxdt257m1e20eu478wt4c3j97yflm,base,productive_factor,0.670936964,21,Female,Yes.,NA,33043,3230,1889,15464,1213
+jh7f0xw28hfnt8syzy7s97o22vs3dlua,reversal,double_preventer,0.891080617,22,Female,Yes.,NA,30156,2948,2388,10940,1330
+jm4r3jhuk2f3hjsu261wqty6ds7b9mk8,base,double_preventer,0.369639794,30,Male,Yes.,none,44225,3668,1751,19266,3623
+jmgz5v9pf7eqnkh6ce5sqby2frxvr01y,reversal,double_preventer,0.472555746,35,Male,Yes.,NA,32881,1663,2405,27907,1411
+jmn4uqeqsvmpgo6pory5eph084fnttbw,reversal,double_preventer,0.695540309,30,Female,Yes.,NA,44376,2785,1874,20241,2185
+jofvphu96snyoxm9x7uobvoty4gn080q,adversarial,productive_factor,0.724083405,24,Female,Yes.,NA,136136,3136,7724,45443,1775
+jt3g2a2l64fbq970m4dqacrflp82k3lc,base,double_preventer,0.230703259,51,Female,Yes.,NA,43441,2718,2129,12281,1577
+jth9zlbs0qslkg7cok9m4o4gop24eon6,base,double_preventer,0.37135506,51,Male,Yes.,NA,21303,3305,2035,7044,1668
+jvoczpbv4rxj6kb71n73q31ylma7bkoh,reversal,double_preventer,0.763427316,35,Male,Yes.,NA,45195,3005,2662,14248,1161
+jzf61dnvx5a0lfymwy6ax91xeydn2mqp,base,productive_factor,0.663522013,36,Male,Yes.,NA,26246,2817,1984,10486,1763
+k1h209n5bv927x6bxn04uv50u5hvta4c,base,double_preventer,1,27,Male,Yes.,thank you,17300,2694,3166,3873,3150
+k1wbzgtrxtmqq4x2dqy0aa0w8fnajh7y,reversal,double_preventer,0.726415094,30,Male,Yes.,NA,17442,2697,1635,8748,1316
+k54ughs3pqbs3hz2zcc40vqwcf8jx76e,adversarial,productive_factor,0.876593613,59,Female,Yes.,NA,37746,7202,2945,21084,2787
+ka9g87ogksptu3lvadml4ypxvoya5gnv,base,double_preventer,0.977186964,44,Female,Yes.,no,37465,3621,4707,30472,4357
+kb5qdn5t1cuvyv300n2tjqaj84cv3qwv,base,productive_factor,1,25,Male,Yes.,NA,15320,1925,1204,4620,1076
+kbrnv4cqz38utwls5vapkyn01y8xgqqe,base,productive_factor,0.969125214,34,Male,Yes.,NA,41717,7126,10751,25247,13811
+kfdv3gd68w9cveohu212nc2x1yqhafvs,base,double_preventer,0,22,Female,Yes.,NA,17774,2721,2310,4881,2022
+khosyrot3n6n45dgjm5y82umgow39uzd,adversarial,double_preventer,0.628899554,36,Male,Yes.,NA,22958,2813,1788,5421,1188
+khugdc3holkb5b1jhpu2mbz1984p2g7b,reversal,productive_factor,0.77672956,23,Other,Yes.,NA,27514,3164,2057,17029,2244
+kj09pec0x7maza4v1t894f1m2n6blb74,reversal,productive_factor,0.668096055,40,Male,Yes.,Interesting study question. I suppose Mike put things into motion.,27079,3270,1743,22996,16747
+kkqmxoajvkqca49zctvzyv1h3x0omjuo,base,double_preventer,0.160377358,58,Male,Yes.,NA,54148,4076,2383,23288,2217
+kkwake8d8r3p41s1acbekvho932u6xt6,adversarial,double_preventer,0.690233705,24,Female,Yes.,NA,13146,99482,7980,7562,1173
+knbd4ejtb7pswuwbc3zhbwb5lwcwyybk,reversal,productive_factor,0.2083244,62,Female,Yes.,NA,50068,5541,2350,15519,1832
+kuz4mrhmlr1sh0xn68n63fwoovtj7hdy,adversarial,double_preventer,0.91509434,55,Male,Yes.,NA,26260,4046,2960,14525,1912
+kvk4jwcqnb3eufgzknhjrzp9ba018cvf,adversarial,double_preventer,0.74468,75,Female,Yes.,thanks!,27461,5038,3012,26571,8895
+kyla786o8j4s4ues3pvkgkfk1p03juks,adversarial,double_preventer,0.886846055,32,Other,Yes.,NA,40474,3286,2170,12709,1311
+l0twvxde7g5lbxtdo59dlleqfn9d5rlp,reversal,double_preventer,0.143171098,33,Female,Yes.,NA,25919,2500,2016,4626,1816
+l2mqmqokxcerom4d5twm1g6vujk1utjo,base,productive_factor,0.988164666,40,Male,Yes.,NA,19493,3116,2126,5428,1057
+l2wsr6j5jrhclxkux3f19fwva4hz9on8,adversarial,double_preventer,0.768063894,23,Female,Yes.,NA,42199,2362,28385,6357,1235
+l50vv71myyn3sswdxdjhsqtn3oupdhdv,adversarial,productive_factor,0.889365352,40,Female,"No, I had trouble paying attention",NA,32766,2677,1854,34812,6817
+l7f3ppe8z6mka5l6fc5gyacd201v0rrp,reversal,double_preventer,0,56,Female,Yes.,NA,20870,3791,2485,11437,1933
+l7nl2l6f6orwqczwj9dlpkbf4l22ro1n,base,double_preventer,0.680571934,25,Female,Yes.,NA,181793,2697,1622,7204,1906
+l80m34z9f2fmwnj6y5zuog64wu3k0ezl,reversal,productive_factor,0.762435678,57,Female,Yes.,No,36423,3618,1991,16648,4339
+lju1u3eycrufptsa5yltxqlekt0cp9xr,base,productive_factor,0.811149228,45,Female,Yes.,NA,43556,2774,2384,9118,1502
+lklsqxzo52vho5mom5u1vwn67flqsm3p,base,productive_factor,1,31,Male,Yes.,NA,38885,6165,2660,33407,1562
+lt3kn9rlrxw107s4p4lq5lxqczq4o3dr,base,productive_factor,1,47,Male,Yes.,NA,28444,4759,3388,3935,1578
+ltl3kejybe3f5mf6z2q82btot7qo7chx,base,productive_factor,1,29,Male,Yes.,NA,28674,4620,2189,13608,1709
+lvpcwhyecfh9rodh9q06ju0tshtbl30z,base,productive_factor,0.739748606,35,Male,Yes.,NA,24189,5682,1788,8862,1926
+lwqz353p0m1g3qstmbckpxroybsgmksc,reversal,double_preventer,1,34,Female,Yes.,NA,40330,2982,2580,7256,1456
+lwumzyx0p0nax8zafs0qvey9nkkeml3x,reversal,double_preventer,0.700686106,35,Female,Yes.,NA,49897,2318,2134,12813,1553
+lwy30jfo5es0e2fvchqccu4j7mf6e0r1,base,double_preventer,0,32,Male,Yes.,NA,25478,3236,3571,15282,1928
+lx9oj059t6qvpelezro85swmyq6hyls4,adversarial,productive_factor,0.724579224,20,Female,Yes.,NA,16503,2326,1580,4714,1453
+lz0bs4h6zzhlbmtp3ybjq2kgfr9jf853,base,productive_factor,0.803602058,57,Female,Yes.,no,34562,5459,3404,14755,7491
+m5qb2l1vdx0yjxtkhact7315nv6qwbz8,base,productive_factor,1,54,Female,Yes.,No,55062,5165,2970,17314,5903
+m8e6tfrtrrr71y89e97ggu7u4x5lap3s,base,double_preventer,0,25,Male,Yes.,NA,11412,2524,1674,4109,1288
+mbuscu6huzbbusbod2m8vfmnhmkfa6q1,reversal,double_preventer,0.891080617,24,Male,Yes.,NA,57668,4298,1798,16615,1251
+mcbapb2tcjbwovypmzl1cb2gacc4avod,reversal,double_preventer,0.669811321,32,Female,Yes.,NA,32690,2653,2654,12710,2155
+mdq15tppxcmghlvoa024kve76khd8jwn,reversal,productive_factor,1,31,Male,Yes.,NA,34332,1800,1344,3630,958
+mf2jhk59feh7rn93a5ugadhpjhlld5as,base,double_preventer,0.78985313,25,Female,Yes.,NA,11149,3821,1646,4781,1570
+mg29g86qqo45mla6kv7n31yv1pjx2q6y,adversarial,double_preventer,0.754716981,32,Male,Yes.,NA,25425,2618,1753,10710,1353
+mkvctt1gp68145v19we1rq8bu5m823bz,reversal,double_preventer,0.531713418,60,Female,Yes.,NA,43358,5490,2804,11419,1907
+mmw2zvyfnqs9p1gd2xekuv9n5aeh96m6,base,double_preventer,0,56,Male,Yes.,NA,20812,3246,3891,10392,1312
+mpnp1yksk7wtjna3trktrjqu0fqy1zqe,reversal,productive_factor,0.054888508,34,Male,Yes.,No.,37511,3867,2295,9536,4063
+mqqwswhg0e2fl7e8mxs6ncqyjacofga8,reversal,double_preventer,1,29,Male,Yes.,NA,28678,3694,2304,11140,1627
+ms561gmxh7czlss588ks5cy2usjg6baf,base,double_preventer,0.253736829,66,Female,Yes.,NA,28923,4363,2237,6691,1531
+mu8mbh2neunmnx7987059c9728bp30e7,reversal,productive_factor,0.655403087,55,Female,Yes.,no,50274,4901,2886,17093,6372
+muhk2x5vc3j0yv63e4hgev4fhgw2mdqm,adversarial,double_preventer,1,27,Other,Yes.,NA,23238,2929,2091,12937,1291
+mw0gjxleqyr3ssm3ruq55s55xezf9vqs,adversarial,productive_factor,0.657461407,25,Other,Yes.,NA,31640,4765,5560,15684,5882
+myhmlyfhxq8lx8r8huu738q2ocersxpp,adversarial,double_preventer,0.626393654,24,Female,Yes.,NA,48537,2084,1940,8203,1125
+n6k9ns509gzva4xc715s7d8qtc2o956c,reversal,productive_factor,0.527412907,30,Female,Yes.,NA,27628,3183,2012,7972,2069
+n7fb730t2mrgrq9rucz38ftsqv39uaye,reversal,double_preventer,0.835334477,25,Female,Yes.,NA,36908,2750,1585,11647,1552
+n8fu2b6snn3ooycwx9gsrlzg475j8vwz,adversarial,productive_factor,0.855060034,27,Male,Yes.,NA,31752,3136,1913,19553,1492
+n93rlw9tlz82zvg7vwzyoxx99jyx3dt8,base,productive_factor,0.584048027,62,Female,Yes.,NA,55976,4822,2574,13749,2295
+nadgpm03xl1xyd26htduma963cpsdzbm,reversal,double_preventer,0.889365352,21,Male,Yes.,NA,22791,2014,2141,6230,1516
+ngdekwdxttwpraakqajlom23hnuk48by,reversal,productive_factor,0.796740995,42,Female,Yes.,NA,28094,4109,1847,8871,1709
+nghknt4w1pdkp0f5t0acvabaa6uepwp2,reversal,productive_factor,0.162092624,25,Male,Yes.,NA,24142,2866,1455,7006,1035
+nhpqhuk5yxgoms3k67fp2hcu5mzu37rg,base,double_preventer,0.121154052,22,Female,Yes.,NA,23681,2227,3880,11629,1173
+njkeg7zqkhfykf7pb0lokb1p9urrpotm,reversal,double_preventer,0.780941788,22,Other,Yes.,NA,17759,2557,2366,8896,1257
+nnh8dhu555dkwuxvez0gq6hrk34h3m7g,reversal,productive_factor,0,60,Female,Yes.,"no, thanks!",67156,4603,2517,21611,10003
+nuvatnlle2we6vdmxvemc3xwknpcolkm,base,productive_factor,0.82761578,44,Female,Yes.,NA,16527,2692,2079,11366,1231
+nvpzrfnwtk4ntco3y9mz1dooycwjne2k,adversarial,double_preventer,0.693503431,34,Male,Yes.,NA,52992,3881,2815,12683,1693
+nwjua7lmpl3sh7j2uw3l4wgtw2j2pxf0,base,productive_factor,1,25,Female,Yes.,NA,22471,1985,1488,15730,1332
+nzdwq38lkud65s2jabrufjos1mwyx8yf,reversal,productive_factor,0,23,Female,Yes.,NA,43161,3870,2127,14405,1099
+o22sx95xzu344evtltbteefbkznvzdlk,adversarial,productive_factor,0.958833619,57,Female,Yes.,NA,40109,3495,3094,9233,1325
+o39zggmsc049lfsrvzl98tlh8sfqfruv,adversarial,productive_factor,0.674957118,69,Male,Yes.,NA,24604,4220,3113,4816,3777
+o3endlu0a9tt13bwr5d8m31w9pdwpfk0,reversal,productive_factor,0.289022298,55,Female,Yes.,"The first person's actions could have been said to be the cause, if there hadn't been any other interference.",55560,4663,2932,12315,35456
+o4tq5pa4wj2mmaeyhcz7tmlontd95h5v,reversal,productive_factor,0.759576901,25,Female,Yes.,NA,114141,2888,1935,6876,1484
+o5dxd5tmk45qoxyzct7dce10yddhnawn,adversarial,double_preventer,1,43,Male,Yes.,No,31457,3756,3143,13337,4857
+o5kd04js9usf6jpoqo7rj6c6ngcemr2b,base,double_preventer,0.748713551,41,Male,Yes.,None.,169519,4743,3675,65631,6686
+o89192ho8bus0qqvpgl98kzawxd0lwgf,adversarial,double_preventer,0.675761149,35,Female,Yes.,NA,29377,3759,2547,15061,3271
+o8g0myfrpg8f4gbpot7dksyl20qn3s8m,adversarial,double_preventer,0.570325901,30,Male,Yes.,NA,8749,4694,2071,15289,3247
+obss0whj6fajh4314w9y7rne1pjp6twq,reversal,double_preventer,0.558319039,40,Female,Yes.,NA,32039,6035,1672,5270,1573
+oc4a3zobknlype441z9alosl75oe4h97,base,double_preventer,0.566895369,35,Male,Yes.,NA,45036,2645,1693,10116,2584
+oe6rt2f7sevxgf41t8az9w56r6k9yx2p,base,productive_factor,1,24,Female,Yes.,NA,24716,2418,2315,10196,1863
+oeref1s32wysxdb73eav6blvk2tenpz7,reversal,double_preventer,0.227272727,27,Male,Yes.,NA,23960,3129,1457,3759,1810
+of9915ku8jb0py8nfpkjqa4cxcxeb84g,reversal,double_preventer,0.93567753,54,Male,Yes.,NA,28813,4556,2541,6563,2256
+ojqvhax7wqfa89jde9jnetdyfd3jezu1,base,double_preventer,0.056657376,23,Female,Yes.,NA,16189,1935,2290,6697,1240
+oktq0ht58u3nlskmp02ypjsoborrr55m,adversarial,double_preventer,0.863636364,24,Male,Yes.,NA,24946,2541,1569,13665,1310
+om0vtqwybkjcug96hlng38x363zyfqob,adversarial,double_preventer,0,23,Female,Yes.,NA,41488,3400,25557,6912,14791
+ompcc803qudtnkamm54hpt4fwb7w8j57,adversarial,double_preventer,0.752715838,25,Female,Yes.,NA,71646,2298,1759,9848,1178
+oq3ez7kg290prpplubgtge2sgfc77pkr,reversal,double_preventer,0,27,Female,Yes.,NA,36665,6144,3702,4195,6089
+oqfvqgcgjr853jkdot9ae0t0lorzr3xv,base,double_preventer,0.477701544,28,Male,Yes.,NA,22735,21920,11935,41458,13625
+os7doe60kpvqhxv4wl4hojpz6hnpwgrq,reversal,double_preventer,0.17238422,32,Female,Yes.,NA,31515,2304,1995,13370,1900
+ous5qve6aq9kftabwwd8dab7yk7aoy8m,reversal,double_preventer,0.253484066,60,Male,Yes.,NA,30669,4176,2575,11642,2430
+ovdeesec7ojqx8nbemouefu2m0f4qlht,adversarial,productive_factor,1,66,Female,Yes.,Interesting. Thank you.,68585,4191,2907,43999,11345
+oxrfej35yaconhesxl8fe5do67j7muyq,base,double_preventer,0.140137221,40,Male,Yes.,NA,26995,2444,2224,13953,1462
+p0epy4u3okr20qnm4yklun19v2w5mtqn,reversal,double_preventer,0.805317324,28,Male,Yes.,NA,25532,2983,2587,14088,1718
+p0uhuue3elo4mluug41znpa46b3scl9u,base,double_preventer,1,74,Female,Yes.,No except thank you.,84533,6248,3654,15013,10636
+p3v5qzrel13f6b6hh0xv9bkmf1nluqkt,base,double_preventer,0.437678674,25,Female,Yes.,NA,24303,3046,1663,8948,1251
+p4ccsdfsm6ugmftlszgz6pna21cmh0to,base,productive_factor,0.875643225,29,Male,Yes.,NA,42928,2968,1612,7419,1230
+p68tpxnrp611qw99kx8vtr23f8ycz3vl,adversarial,productive_factor,0.795025729,27,Male,Yes.,NA,47638,12351,2263,10974,1220
+p91dxb5n8dsvamo5485u6ojtvczaoel0,base,double_preventer,0.61406518,22,Male,Yes.,NA,18777,2538,1757,5535,1081
+pazjk4tve8ox59bkd1ccfy2ysx49elsf,adversarial,productive_factor,1,28,Male,Yes.,NA,31275,2354,2837,6884,1896
+pb1s1hzqcrz9uahkksl8jdqbyxej7lno,reversal,productive_factor,0.881338443,32,Female,Yes.,NA,35448,8239,2200,52537,1893
+pbe37oxhhxmuayuar96rbeh0zh2jw9az,reversal,double_preventer,0.911663808,34,Female,Yes.,none,22990,6166,3792,14516,6180
+pka57t6mp7lu7gs8xo8z9k9ps2mye2cf,adversarial,productive_factor,0.927101201,44,Female,Yes.,NA,48187,3163,2047,14125,1466
+pkc877t34qcejs7v93ofb8gta54f1x1w,adversarial,productive_factor,1,59,Female,Yes.,"Slide scale never activated, to my knowledge. Would have answered strongly agree.",86902,10069,3465,16053,79283
+pl4ma0sp9cbsmm3xbz486jtwqo3p63os,reversal,productive_factor,1,48,Female,Yes.,NA,71951,4484,1763,10064,1570
+pl6bowwpo8x40tmvk31c0uwwqbvgrgzj,adversarial,double_preventer,0.196853559,30,Female,Yes.,NA,16566,2027,1932,3661,955
+pulllnlh1m73l0rgn78fwkl49mytwuwu,reversal,double_preventer,0.848828795,19,Female,Yes.,NA,16817,2337,1744,7544,1400
+pxsdkd7g3ec6kwazw3z043tgkchgn5mo,base,double_preventer,0.25877287,63,Female,Yes.,NA,69639,3289,3499,16817,2197
+pyyb7jx5tjktsj0v9epaal5qhez2rfk1,reversal,productive_factor,1,24,Male,Yes.,NA,21310,2072,1834,10480,1450
+q261obn06h89aqlgchk3em8soy3lukwl,adversarial,productive_factor,1,28,Female,Yes.,NA,27677,1967,2814,9499,2023
+q2kqj2tabkvq2uqaxtv641td6rp8hrl6,adversarial,double_preventer,0,33,Female,Yes.,None.,34441,3879,2731,18900,4716
+q6u6wwouyu7v5lb5qp0mcagzksdja9kk,reversal,double_preventer,1,35,Male,Yes.,NA,36013,3178,1751,20779,1630
+q8yl5snjee8wdb5vlen5l9kat8bwcb4k,base,productive_factor,0.737859134,26,Female,Yes.,NA,52776,4109,3958,27484,2362
+qa1r2abm1lpg18s98n2dq9s5lhah95ah,reversal,productive_factor,0.860205832,36,Male,Yes.,NA,37127,4067,1747,12078,1443
+qbd686hef1f2xsksnlqfhct2r2a1f1rw,reversal,productive_factor,0.174038686,56,Female,Yes.,NA,34724,4231,2802,18247,2528
+qc0sr6omf9s2lbolg5kn2tlw44u98slg,base,double_preventer,0.047643992,60,Male,Yes.,NA,36908,4566,2908,15948,1764
+qecvt6ouul7en832n9utf395dt2tob8k,adversarial,double_preventer,0.800171527,37,Male,Yes.,NA,46475,2627,2047,6015,1325
+qeetzjfgkc5qkstb3sjg6q8osjo81n51,base,productive_factor,1,53,Female,Yes.,no,60595,7441,3349,22266,8335
+qg7h7c8toojzz4cbgceelw6sedzm3cmx,base,double_preventer,0.800964837,75,Female,Yes.,FUn!,34594,5704,2747,16499,7090
+qgrjbeqrg80u4lc7cc4qgeekp2csd0r7,adversarial,productive_factor,0.992281304,50,Female,Yes.,NA,39926,3517,1751,7309,1491
+qhb127lskgcx0vgr258n87neg8pf0sko,base,productive_factor,1,65,Male,Yes.,none,51300,5388,4279,26231,5861
+qhrt03pjej5u9c5c0t954rh5k693wp6a,base,productive_factor,1,28,Male,Yes.,Good luck with your research! :),20104,4375,2203,14394,9518
+qrhenwqmnyvwmxql07hzdk9at3o0pylu,reversal,double_preventer,0,79,Male,Yes.,none,35335,3694,3840,12857,4985
+qrrhh3jp7e92r1g9vdhsw5xzm62dj2av,adversarial,double_preventer,0,38,Male,Yes.,NA,39973,5493,1750,8003,1305
+qs25ofzsgk4zbalpjy869m8hg5sdej8t,base,double_preventer,0.240994854,48,Female,Yes.,"No, not at this time. Thank you.",34413,3424,3479,10941,12563
+qso34wsmz8rfyqom2xztgv3rvyp0g42v,base,double_preventer,0,57,Female,Yes.,No,45750,3258,2502,7319,6779
+qtxzp0mtkjbch83lyk3h02c16gos68cf,adversarial,double_preventer,0.38515303,34,Female,Yes.,no,46776,2505,2346,14317,4183
+qv0nv7htx27hgssqe32lnfr6uysakt04,base,double_preventer,0.007986707,65,Male,Yes.,Lots of bumping going on in that bar.,46584,4840,3172,24209,39503
+r01jatqomhv9ms2jltfs35qfqkzum1qg,adversarial,productive_factor,0.901372213,41,Male,Yes.,Thanks!,39709,3620,1958,16046,11680
+r1knhltayw97eyojjnmbzez6b487lhgw,base,double_preventer,0.551457976,39,Male,Yes.,NA,24809,6605,1849,5268,1610
+r4lhz5x4roah6dlpnq3m5c5l9uc9h1rd,adversarial,double_preventer,0.73567753,31,Male,Yes.,no,41254,2013,1501,18915,3185
+r5jyg74x0odnhzz5swmjaqln82lusd1s,adversarial,double_preventer,0.791595197,33,Male,Yes.,NA,55019,3603,2062,8247,2179
+rafrjvzg3k67zcrrzqwmuc916wg6hled,adversarial,productive_factor,1,26,Female,Yes.,NA,78500,2557,2298,19472,1821
+rfxglsmd4t87ahbpfxp1tmn4k1erh8h4,reversal,double_preventer,0.892795883,30,Male,Yes.,NA,37700,4565,1857,20435,1406
+ro0ozr6wcp4ove8crw22uhxyd8qlyz1c,base,double_preventer,0.142881647,33,Male,Yes.,NA,33962,3362,1659,7327,2081
+rv12c5h566h9hvk6yt21zpa8c8qb8usx,adversarial,double_preventer,0.422813036,26,Other,Yes.,NA,42835,2655,2180,8025,1466
+rvpp3sxrbapsla37plldmbzb83gr2834,base,double_preventer,0,39,Male,Yes.,NA,20405,2243,1456,10195,1278
+rwpfspbqjqcexebwygvvr07r9sw9p6hz,adversarial,double_preventer,0.494854202,67,Male,Yes.,none,15990,3150,2447,7709,4659
+rzf6uzajgag4ogfmj5ny5k1be74lms0g,reversal,double_preventer,1,22,Male,Yes.,NA,60866,2543,1730,15142,2152
+s245m7nqlu28bhveqsecf8hlaxydq5pz,adversarial,productive_factor,0.833619211,22,Female,Yes.,An interesting scenario.,29596,2375,2308,38341,13047
+s49oh0n5vk0w7k6bfx7xt3qpr0a3eest,adversarial,productive_factor,0.510634648,69,Female,Yes.,I had to reread it to get the names straight but other than that I had no trouble.,49167,4860,3772,21941,34183
+s4pf8ncr1j9085gyx90drfdcbal0vfg3,reversal,double_preventer,0.762435678,31,Female,Yes.,NA,19198,2949,1775,4731,5050
+s7f381uvnkvfe2k36lsm0ms4sj97td3k,reversal,double_preventer,0.740137221,41,Male,Yes.,NA,17497,2016,1934,12272,2661
+sbnmju8na28rcyq6lb3gqqbv1kmx5jmq,reversal,double_preventer,0.824871355,20,Male,Yes.,NA,16828,3624,2437,4183,1190
+sbskckrkz831uqm9vpjpbk8mpds2mcu4,base,double_preventer,0.174099485,48,Female,Yes.,Nothing to add.,62997,3898,3601,20297,11997
+seajyrcyxgy5fxslx6333ha8k4wl8k10,reversal,productive_factor,1,42,Female,Yes.,NA,46996,2745,1668,21865,2139
+set4zk27dwx4s60bktqaeqj8t25owko8,base,double_preventer,0,49,Male,Yes.,No,79715,7725,3760,15603,7399
+sgtypgorhzw72efxdbfuds8cceym575b,base,double_preventer,0.319897084,34,Female,Yes.,Have a great day! :),18759,2856,1506,4372,146950
+slzs2xx4hsosbjara43pedfvj5ucgowu,base,productive_factor,0.551270369,28,Female,Yes.,NA,153815,3355,2006,17278,1330
+so9qopeyuqk2ntvufha0lsp4xwfj4mvl,base,double_preventer,0.501143511,37,Male,Yes.,NA,38811,3798,2891,21299,2967
+sqypjdywx0s7knl7bs3whx3vk7svnwxp,adversarial,double_preventer,0.930531732,49,Female,Yes.,NA,26986,4287,2286,25656,1665
+szpn54fwugcvhj89xtnnwozcwe5gryy0,adversarial,double_preventer,0.399371069,38,Female,Yes.,NA,44870,2765,1686,9294,1591
+t3998cflkpzy098b09981vs3n1odg0nc,base,productive_factor,1,26,Female,Yes.,NA,20746,2864,1844,14501,1286
+t3y2wc2yg4q00n93lwhlfpl2e7qtjvgx,adversarial,double_preventer,0.791206582,24,Female,Yes.,NA,15927,2519,2252,4053,1294
+t561hv3qz85c5eexbr4yeel01wz0a0v7,adversarial,productive_factor,0.79775363,67,Male,Yes.,Thanks!,51998,2593,2188,9524,11605
+t6o8pxqb1hklomura1gjmwzr4u31okaa,adversarial,productive_factor,0.91509434,70,Female,Yes.,NA,47656,5741,3769,18503,2139
+t719mh35gs3eup47bjgsx42yac3ed2e7,base,productive_factor,0.997427101,59,Female,Yes.,NA,53577,4315,3170,19732,13629
+ta0oajnlgkzlf4jns9l0ltdz9fw3cpj5,reversal,productive_factor,0.722984563,24,Female,"No, I had trouble paying attention","I have ADHD and just stared at the wall for 3 minutes, but then after I read the scenario carefully and answered very thoughtfully.",512063,1644,1693,12121,27946
+tezn20maz6o2txfkkoej4ojzw6jb85a3,base,productive_factor,1,31,Female,Yes.,no,50199,2175,1799,9676,2866
+thqot3p7xc1kklxe70jmeo4273crtgl2,reversal,double_preventer,0.794503109,32,Female,Yes.,NA,24554,2830,2233,10792,1851
+tmwmzxtlq6wtar1c8v97e56vj238ksv2,base,productive_factor,1,32,Female,Yes.,No,20993,5521,2670,8527,7824
+tnzub21dha5z7w9eyjdu7vogwrquwp32,base,double_preventer,0.47941681,45,Male,Yes.,NA,12390,3550,2287,5040,1655
+tp6bq6s94gfmzvl2szdtjextw51wzs3k,reversal,double_preventer,1,36,Female,Yes.,NA,85924,3675,4676,13280,1955
+tq6boaoj8l2zm30ohto13r0rwjrerzrv,adversarial,double_preventer,0.512006861,69,Male,Yes.,NA,52620,5386,5164,18406,3736
+tu58uk9qeglh3sgj89jy6gm7t1tsn1ra,base,productive_factor,1,27,Male,Yes.,NA,38029,3240,1400,8552,928
+tu5o0s0qn47pu4dwot9th08qpdyh6hoh,adversarial,productive_factor,0.984048027,27,Male,Yes.,NA,28516,2633,2291,16463,1656
+tx9j2l2og4fz4bzrjkuy6fhlcytb7ap4,adversarial,double_preventer,0.187821612,30,Male,Yes.,NA,37630,2074,1597,7323,1415
+txq4552fjz0706khz8pytf6cocq9b8v0,reversal,double_preventer,0.975986278,57,Female,Yes.,no,66209,4386,3266,24924,5469
+u0hkzojlv4jgotzmzjeqy8qj1e81j6pc,reversal,double_preventer,0.427958834,24,Male,Yes.,NA,37815,2106,1218,5905,1186
+u1n86vz5knu96mrc58gtzuc55q35eg17,base,productive_factor,0.487993139,22,Male,Yes.,NA,30031,3140,2424,5221,1617
+u3ad9xt0j1w95dw8sbh6vnrmx4yl610j,base,double_preventer,0.316322425,57,Female,Yes.,NA,50609,5965,3936,16416,2309
+u52bvr69gh9arbfy10shx44ocyft6wsz,base,double_preventer,0.411795751,35,Female,Yes.,NA,29171,3994,2992,17621,4948
+u5m39gwzto8jznhvgspvwuc012t3qf0b,adversarial,productive_factor,0.696050854,35,Male,Yes.,NA,54578,3533,2142,8885,1460
+u61oc0dxlq5pqb8us34pq2bfjrt2lmaf,base,double_preventer,0.071183533,46,Female,Yes.,NA,51278,3251,2014,11785,1786
+u6rvfkcvdztghj3u4pm4h6bqu8aq0qy8,base,productive_factor,1,50,Male,Yes.,NA,63014,4505,3242,16202,2355
+u7m71m99kmfofy9omdyexb1z4sh5muyo,reversal,productive_factor,0.927101201,28,Male,Yes.,NA,22376,2006,1718,9061,1413
+u80ltcylkb7muydr4k4c1g5q1vsstfvf,reversal,productive_factor,1,38,Female,Yes.,no,29172,2559,1683,10163,2940
+ua2nucf0nf3jxbbrxynltmzxb728jt34,base,productive_factor,1,44,Male,Yes.,NA,25831,2611,2191,7006,1417
+ua41r8j1o8t0aykba0wqfu73aupnhckj,adversarial,double_preventer,1,31,Male,Yes.,NA,30231,2479,2147,7092,1957
+ua6n9zdfz8pzef1zu05q0os9sz4mm3g0,adversarial,double_preventer,0.337735849,39,Male,Yes.,NA,306699,2777,1825,16131,1164
+ucuxs9s1kmdycwkmfq8lh2yzyymtwm39,adversarial,double_preventer,0.587478559,26,Male,Yes.,NA,21752,2987,2360,15682,2029
+ufpx7qpc5dfqczf6vz2eu0vbkf7lht1m,reversal,productive_factor,0.623499142,44,Female,Yes.,"In this survey, the scenario is complicated. The first man knocked into the bottle, the second man was trying to catch it, and the third man knocked the second man out of the way so the bottle ended up spilling on the floor. The first man was partially responsible for the bottle spilling, but the third man was more responsible because he stopped the second man from catching the bottle.",68724,3783,2342,16449,209107
+uj6j6kxyrff1ot7rvhmv6jps8k8d3w47,reversal,double_preventer,0.498981561,21,Female,Yes.,NA,59012,2276,2086,16068,5717
+uj8bxsc28qo3d0rekssq6pz1b7u1yeo0,base,double_preventer,0.501715266,39,Male,Yes.,None,29455,6974,2671,10382,6304
+ukjxdxy17w6z1sa9byr21byrvpedvohw,base,productive_factor,0.748713551,68,Female,Yes.,No.  Thank you,37363,4707,2627,14392,12411
+ukzedtnkrmdsg09zves0hfbrv8rqwka1,reversal,productive_factor,0.709262436,35,Female,Yes.,NA,55306,5272,2811,24947,1957
+ul8gdw13eh5d6elgls10wd4tcckhap8b,adversarial,productive_factor,1,36,Male,Yes.,n/a,33028,2499,22728,16599,6203
+ulf87rlaslb62x3ka5ob2ulat74az2u3,adversarial,double_preventer,0.771012007,35,Male,Yes.,None,27622,3004,1805,15940,4897
+ulfb8tn35rvwtdowd1nmu4hzm0dsa1r6,reversal,productive_factor,0.662092624,29,Male,Yes.,NA,40081,2830,1904,5791,1608
+ulsln4tzze4yp8faxsjz6u0cfv8pry3y,reversal,productive_factor,0.627913741,24,Male,Yes.,NA,27785,1721,1198,6600,1104
+unxdzpd3gfo7ymug1m1k3zym85ak63v7,reversal,productive_factor,1,39,Female,Yes.,Thanks,23975,3855,1791,10164,7212
+uoluyz3h3xmmfaskft8237rk23mcyllw,reversal,double_preventer,0.736587126,25,Male,Yes.,NA,19665,2235,1614,7815,1028
+ur2vjb3k8bprp3eox0u37hpnel1qbxm1,adversarial,productive_factor,0.86329331,26,Female,Yes.,NA,41753,3211,2492,7541,1935
+ur619o5u35wvxkgbfv082ym68qr23r9g,base,double_preventer,0.80858705,24,Male,Yes.,NA,20804,2501,2581,10879,1627
+urcs4x16ctxav2uvvlarxy6o16p8je7z,reversal,productive_factor,1,27,Female,Yes.,NA,25240,2583,1775,24339,5519
+utwjwwrmban98rxb4ulw99yolnez9s6u,base,productive_factor,0.952026158,35,Female,Yes.,no,28489,3724,2451,22972,4202
+uu5f7mvno2rjqytez0cp6tsaetwr01jo,adversarial,double_preventer,0.797427101,23,Male,Yes.,NA,6286,1671,1791,4805,1245
+uu9s1qzjuzuwg3uaoon5akkd0oj3dksh,base,productive_factor,1,34,Male,Yes.,Thank you!,49281,2909,2843,18920,10469
+uw3herorl27peba3q6eeccgvvk3n5pns,reversal,double_preventer,0.916260184,20,Female,Yes.,NA,37359,1661,1708,5782,947
+uwbz7uk7hj2m7qnql4abucej26s1z8c4,base,double_preventer,0.151801029,46,Male,Yes.,NA,70364,4827,2973,14875,4487
+uwwv0883t3hf0p7720vgjsymr5k9y9tc,adversarial,double_preventer,1,31,Female,Yes.,NA,34931,2421,1923,3248,1057
+ux2wlowr94hwpz6zz11xhzwompkau0un,adversarial,double_preventer,0,69,Female,Yes.,no,57588,3735,3023,8672,6941
+v0mcar595gmq941zlg1z2qb23lfdqm2s,adversarial,productive_factor,0.799313894,50,Female,Yes.,no,43815,4134,3541,11415,5044
+v1487p9shtdvphtoj0d5pns9k4n8du8z,base,double_preventer,0.794682676,50,Male,Yes.,"I'm not sure I've thought this through adequately, but what seemed to make an Agree response in some form most appropriate was the fact that the bottle was already falling and would have spilt but for the cited action.",176381,3780,3268,15734,105221
+v1sx255h1cmbhb5xd4rol2bwu8847q6b,adversarial,productive_factor,0.654373928,47,Female,Yes.,NA,29029,3069,1932,10438,1470
+v6vfscc4ltwaphjt77esamu1pk1z1op5,adversarial,productive_factor,0.139606561,25,Male,Yes.,NA,38252,3385,1624,12224,1807
+v87d9rayytlyz6na0coay4yvfl0y3ya4,reversal,productive_factor,0.70754717,64,Male,Yes.,"The question was actually meaningless because the spill was complex but the question was formatted as a single cause question. At least two factors were visible from the narrative and others, such as why the bottle was there in the first place, were undoubtedly involved. A neutral question would be something like, ""How did Jack's actions contribute to the event?""",42933,4639,3376,16431,303173
+vb54vfcl988mqhw510xaf1od1q7y8fcl,adversarial,productive_factor,1,37,Male,Yes.,NA,30735,3332,2340,17964,2193
+vcwufd0rxczwspstc3u8637uzdsr3ehb,reversal,productive_factor,0.06736373,67,Female,Yes.,NA,46714,4827,2297,19321,2468
+ve8o9z3qqe5zsw1fsjpeljbpdva84zwt,base,double_preventer,0.385077187,63,Female,Yes.,No,57890,6123,2845,25825,6606
+vfzqa4xao2zvgqbdjprofl9stlen9j4b,reversal,double_preventer,1,46,Male,Yes.,No,21124,6158,2664,7814,5297
+vgwj6dnegf1omh96ojyyyb572tj7abas,base,double_preventer,0,20,Male,Yes.,NA,21783,2407,2094,12641,1403
+vh6bk5cwojuyosortas617ysbpjpbbz6,reversal,double_preventer,1,30,Female,Yes.,NA,24878,2513,1661,8548,1167
+vj5g3doj6cducnxl3wvkxr45dxwevt1u,adversarial,double_preventer,0.138052101,26,Male,Yes.,NA,32166,3009,1988,3545,2434
+vl4fvvcle6cx699f3t192fvhguzt0k35,reversal,productive_factor,1,46,Female,Yes.,NA,49028,3653,2481,13486,4722
+vmso7hwphse3ehuv75314rb28qm6exl6,base,productive_factor,0.920240137,34,Male,Yes.,NA,30072,2644,1885,8226,1270
+vnprwsgbl2lz7xzby0xyyqp1b3nr5ohg,base,productive_factor,1,29,Male,Yes.,NA,19791,2552,2641,4825,1178
+vpgunm30ywpfsph8f89e7vcubqbs0fss,reversal,double_preventer,0.732070111,28,Female,Yes.,NA,13197,2629,1799,3561,1006
+vrac5n6td8zfuzhdnfundsrga9p79cdq,base,productive_factor,0.998001142,46,Male,Yes.,Take care,27150,4302,2566,18429,8978
+vrngjd7ehpoxfg36x6bs18p7krbcnqx0,base,productive_factor,1,38,Female,Yes.,NA,43478,3538,2229,14128,5566
+vt73at04armoh38ccv5afpr15p0tf40p,reversal,double_preventer,0.889365352,42,Male,Yes.,NA,43506,3004,2300,17192,2029
+vud01l7wftjf4lv8jnlym6ald3rgn28t,base,productive_factor,1,28,Female,Yes.,NA,36208,3711,6036,21178,64279
+vvh10dnwrlz8tayvhlc4nhcl9x0hnhvp,adversarial,productive_factor,1,31,Male,Yes.,NA,20922,4072,2359,9404,1540
+vwaprw3k2rvd1u7a5lht0q5vzaf4lojm,base,productive_factor,1,18,Male,Yes.,NA,33449,2991,1357,26581,31913
+vwcrjmglp3szlz7jycayep595nnzjklg,base,double_preventer,0.005660377,27,Female,Yes.,NA,34676,4704,2602,10977,1755
+vzmf8gad64hurn0vl1cx8dypj1p9hcqw,reversal,productive_factor,0.940823328,28,Male,Yes.,"None, thank you",15399,1784,2100,5530,9361
+vzol9ygmr6cda3jco56vrvvwubs3xby0,adversarial,double_preventer,0.284037307,76,Female,Yes.,I was torn...and am still mulling over my choice.,90766,4182,3007,13933,52108
+w1cchjt06wkly3ehhvc0b9cfygl9t5az,adversarial,double_preventer,0.851629503,34,Female,Yes.,n/a,49018,5099,3949,27107,9201
+w4r3rw1ajgc81f0707dp8bqjjyblwcfb,base,double_preventer,0,41,Male,Yes.,NA,29996,3785,2173,26913,3568
+w54l7t243zkq0ldxfzg1fxcv39pg346t,adversarial,double_preventer,0.172411021,46,Male,Yes.,n/a,32009,3579,2541,12266,3848
+w57jwkfgskc3pu8cyfa7fcntrnzwq305,adversarial,productive_factor,0.867793055,57,Female,Yes.,Thanks for the study!,66542,4515,2397,10502,11682
+w5xofqmwquwplbef18m801hxpy794c4a,base,double_preventer,0.524871355,41,Male,Yes.,NA,4294,2877,2023,6678,1123
+w8g66jocou2e0ut0zuzy520fffbf8q1l,reversal,double_preventer,0.019725557,40,Female,Yes.,NA,28792,3570,3531,12684,1550
+w9clxfjexmaa8thbk6k843b1ro2ssezf,reversal,double_preventer,0.29245283,41,Female,Yes.,No,83386,4382,2303,18501,6984
+we8bto8haacn1upl9rth6wk2p29qlm8h,adversarial,double_preventer,0.000857633,29,Female,Yes.,NA,33686,2550,1503,5805,975
+wf4y0vuwuxrb1txwukzv6o27a85z2d6p,reversal,double_preventer,1,28,Male,Yes.,NA,31387,2650,1905,13945,1801
+wg8agyl0xrqs5h1kmwoho9d3ctbn52mf,reversal,productive_factor,0,56,Female,Yes.,none,29761,3172,2226,15221,3979
+wkfdnh6vtlt17v9p6bk9cy57oqfnzhrl,base,double_preventer,0.995025729,57,Female,Yes.,NA,56442,6550,2662,5822,2220
+wolcflyy36lrfjxxk5savq3qntn06mlu,reversal,productive_factor,0.971416702,53,Female,Yes.,"Mike knocked into the bottle. If there was no one there to catch it, it would have spilled anyway.",49563,4035,2525,13079,51295
+wr9qrl2f6z9erttfby6u1f84bhtlt3r0,base,double_preventer,0.860205832,38,Male,Yes.,NA,32862,2790,1758,12333,1454
+wsro8xdl89ojhr3ujzohzsf34b04pa6n,adversarial,productive_factor,0.70754717,21,Female,Yes.,NA,16814,3158,2111,4845,956
+wvkfojs0ovu7n9hh9h21a337gfwbwvbk,reversal,double_preventer,1,66,Male,Yes.,NA,24648,8168,3024,11885,12560
+wwuw7crw0l9egc7byjugk8xa6w7odxj3,adversarial,productive_factor,1,33,Female,Yes.,NA,19413,2096,1631,13410,1272
+x0dj0h2mfrk8rj61pncmannvjd750jc0,base,productive_factor,0.999195969,30,Female,Yes.,NA,14298,3168,2259,10162,1685
+x3ztw1lofy5hfyvltjo1t7pkb4wlfom0,adversarial,productive_factor,1,40,Male,Yes.,Thank you!,31880,2852,1423,7621,11386
+x4t7k3bampmtp0eqy83umjr54bceadev,base,double_preventer,0,46,Female,Yes.,no,28697,3736,2454,16204,3410
+x7v8tj76yx3tlf6nfp15z1854os0bvle,reversal,double_preventer,0.280445969,62,Female,Yes.,none,61309,4380,3059,12492,6065
+x9ozy5y1etqjnrkqod3kxu036dyobdpb,reversal,double_preventer,0.810463122,30,Male,Yes.,NA,27996,2168,2686,11936,1318
+xk16s2zf28r4ds3v4kkbypfbbp6d0bdj,reversal,productive_factor,0.586527123,26,Female,Yes.,NA,35294,3417,2908,10806,1834
+xkzkzw10zdakb0vae7tpfmndyebceyyy,base,productive_factor,1,28,Male,Yes.,NA,22667,3578,1961,9167,1543
+xlwfdqyjwqhb021eyp3q872c3ay7jk4m,adversarial,double_preventer,0.16380789,29,Male,Yes.,NA,45897,2480,1405,9311,1196
+xlxsahpw5zbt11qfxyg7szhqozs2wmnh,base,double_preventer,0.529014028,43,Male,Yes.,No,69394,4991,2476,12434,7122
+xm3r4j4q0cgysbz7vvf9hntwkk90z0gk,base,productive_factor,1,48,Female,Yes.,Everything seemed to work well.  Good luck with your research!,105544,4817,4086,89741,21131
+xo0ojo2jmc1ra2z7m33m882q6p8wjuun,base,double_preventer,0.323488422,23,Female,Yes.,NA,26827,5089,2589,11765,1660
+xof8jl25g7vlz7tbcmnnmeq47mmcyelj,adversarial,productive_factor,1,39,Male,Yes.,Mike is careless.,38873,2862,3410,18089,8280
+xos846nnb2sqlwp9mn0clmg6hywjo1ox,reversal,double_preventer,1,22,Male,Yes.,NA,27695,2631,1551,13646,1373
+xsvd2pgcbenwn1fmwu5hkpu260fhfx7y,adversarial,double_preventer,0.186347556,39,Male,Yes.,NA,19552,3178,2318,8148,1500
+xsypqdqk6wsvkrc9gntcr3zvj3hqkr3r,reversal,double_preventer,1,44,Female,Yes.,no,86817,3520,5562,15421,7337
+y2g84qdxv9vqdms5kzmhk22asgghdx8k,reversal,double_preventer,0.36163522,27,Female,Yes.,NA,20353,3012,1656,5463,1180
+y3el6yjbdnfw2trvhh55hek674n8s929,base,double_preventer,0,36,Male,Yes.,NA,149828,4072,1953,4882,1521
+yc7t30xw4ng4kmc50hmp3fabdpdjrmlg,reversal,double_preventer,0.681818182,44,Female,Yes.,n/a,27578,3353,7583,10072,2576
+yetyqvaybtz3l6qp99szg4fm5d5oujje,reversal,double_preventer,0.716466552,34,Female,Yes.,no,57561,4341,3037,51442,5839
+ygyqtaw82hypn7w4211jm1g8sj9w0z3k,base,productive_factor,0.995711835,37,Male,Yes.,NA,127288,4341,2300,39857,2533
+ym6pxf4qqmxcreccdt0loquoc3wgy6ov,reversal,double_preventer,0.80703259,25,Female,Yes.,NA,37463,2898,2596,12266,1836
+ymk4fsg10ulffa1ko54hj97osbko7z7t,adversarial,double_preventer,0.148370497,62,Female,Yes.,Thank you!,34846,2725,2080,8974,8327
+yo62ndjp1drr7myyrjje2lt0v88hd2og,reversal,double_preventer,0.24271012,36,Female,Yes.,everything was clear and easy to understand.,51664,4155,1901,7826,7040
+ypnf7z3fdxd7bcwyaf5ltqzg2vnepu87,reversal,productive_factor,0.7864494,27,Male,Yes.,NA,30604,3598,1545,20729,1462
+ys28gah8zz6mtuhvx1wmxkru1rdvqboh,reversal,double_preventer,0.905177959,22,Male,Yes.,NA,17414,2096,1897,8494,1904
+ys41xvebgd0b1cuwrqnn5nz6mlpn8skk,base,double_preventer,0.807193396,26,Male,Yes.,NA,27829,3529,3754,19531,1343
+ysreba9ckfrrlylx6k482kl5h24c5et7,reversal,double_preventer,0.074614065,60,Male,Yes.,NA,114833,4465,2845,18315,2167
+z0ktgn4rdp0tj8bfyx36kqqar4y052rb,reversal,double_preventer,0.916021211,57,Female,Yes.,NA,81245,3605,2398,20309,2338
+z0t938q7xd4pcw1sthlok488dnvyjnse,base,double_preventer,0.584810368,23,Male,Yes.,NA,51280,3625,2139,10698,1820
+z4gcyrhb23bn2dn4xpy6ep7a805h854a,adversarial,productive_factor,0,36,Female,Yes.,NA,81282,7979,3656,23383,6775
+z93c5ls5tgekmu4ghrkr1224cb3cs0ol,adversarial,productive_factor,0.885077187,48,Male,Yes.,NA,59261,3902,2176,19095,2049
+z948gxzq7u342g8qk11s77rpftg3ttpc,base,productive_factor,0.754888508,41,Female,Yes.,NA,20728,2880,2377,10228,1649
+zb22gnuow82pookpfrypy026d1xq7udd,adversarial,double_preventer,0.86535163,30,Female,Yes.,None at this time - Thanks!,63337,3101,1929,11535,6376
+zcekn2t41xozkryspc911xayyww82o6x,reversal,double_preventer,0.199104846,24,Female,Yes.,NA,35658,3069,2521,19349,1850
+zesq546cpwgm8qlcxfqtt4fwfsbd2vlx,reversal,double_preventer,0.844768439,32,Male,Yes.,NA,36410,4605,1170,11955,1455
+zjneksphu5w24du3afuzcclm6wgoga2t,adversarial,productive_factor,0.29245283,50,Female,Yes.,NA,30880,3463,2216,9242,1206
+znufmx8xl4q3c8eoutux9j521vrym0bj,reversal,productive_factor,0.441680961,42,Female,Yes.,NA,14608,3078,1676,2936,1449
+zoee9cah7k2a0bugwww39atardcg69g5,base,double_preventer,0.731212479,33,Male,Yes.,enjoyed the story,60449,2552,3012,8872,9979
+zq6z574darwlel2guydxpl6f9qk7ls93,base,double_preventer,0.708994425,76,Male,Yes.,NA,50351,5870,3924,23901,2591
+zqe20e6d8qtzcoh303cvp0pn4dyu2xga,reversal,productive_factor,0.67838765,30,Male,Yes.,NA,37740,3349,2423,18959,1790
+zrnfeth6tr7a0yxvmsxu5vnn3b4qumkw,reversal,double_preventer,0.249571184,58,Male,Yes.,NA,63585,6364,5527,30503,5555
+zu1652rbuhlgan1wug1vyofr2o0whpc0,adversarial,productive_factor,0.911320755,38,Female,Yes.,NA,27098,2522,1644,13569,2005
+zv9kslchnx5xlcyup1skge9dcgwrruwo,adversarial,double_preventer,1,19,Male,Yes.,NA,49958,5365,1742,23019,1579
+zvgllcmulyst8qzgya0wkedaua8waqlr,reversal,double_preventer,0.86535163,27,Male,Yes.,NA,21970,2839,1907,8675,1486
+zwyweo1zurodjp0mt5ccafnq2v4358ml,reversal,double_preventer,0,35,Male,Yes.,NA,65838,2922,2565,41276,1622
+zxp0han0tdaua93c3jhe2bvaqmhpb3v8,reversal,double_preventer,0.530539773,44,Male,Yes.,NA,28601,3474,2914,18600,2028
+zzflh1swjxh1c11qg1jeludwguy4nquf,adversarial,productive_factor,0.990566038,50,Female,Yes.,NA,38822,3863,2184,4982,1577

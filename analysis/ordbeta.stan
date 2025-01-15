@@ -8,8 +8,8 @@ functions {
     } else if (y == 1) {
       return log_inv_logit(mu_logit - cutpoints[2]);
     } else {
-      return log(inv_logit(mu_logit - cutpoints[1]) - inv_logit(mu_logit - cutpoints[2])) +
-	beta_proportion_lpdf(y | mu, phi);
+      return log_inv_logit_diff(mu_logit - cutpoints[1], mu_logit - cutpoints[2]) +
+        beta_proportion_lpdf(y | mu, phi);
     }
   }  
 }
